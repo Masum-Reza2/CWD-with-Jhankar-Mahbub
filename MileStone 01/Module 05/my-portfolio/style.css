@@ -58,6 +58,9 @@
 .highlight-content h3,h1,p,button {
   margin-top: 1rem;
 }
+.icodiv{
+  padding-left: 1.6rem;
+}
 .icodiv img{
   height: 2vh;
 }
