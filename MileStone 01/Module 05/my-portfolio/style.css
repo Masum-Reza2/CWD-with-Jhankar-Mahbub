@@ -161,3 +161,48 @@
 .deepInnerDiv p,h5{
   color: #757575;
 }
+
+.cvbtn{
+  display: block;
+  width: 15vw;
+  /* height: 9vh; */
+  font-size: 1.3rem;
+  margin: 2rem auto;
+}
+
+.footer_section{
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFF8F3;
+}
+.footerDiv{
+  height: 60vh;
+  width: 34vw;
+  margin: 0 2rem;
+}
+
+.footerDiv img, h1{
+  padding-left: 1.8rem;
+  margin-top: 1rem;
+}
+
+.myform{
+  height: 7vh;
+  width: 20vw;
+  margin: auto;
+  margin-top: 1rem;
+  border: 0;
+  box-shadow: 1px 2px 2px black;
+  margin-left: 2rem;
+}
+textarea{
+  width: 20vw;
+  margin-top: 1rem;
+
+  box-shadow: 1px 2px 2px black;
+  margin-left: 2rem;
+  border: 0;
+}
