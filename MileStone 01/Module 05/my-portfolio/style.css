@@ -24,6 +24,7 @@
 .menu {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .menuitem {
   list-style: none;
@@ -197,12 +198,29 @@
   border: 0;
   box-shadow: 1px 2px 2px black;
   margin-left: 2rem;
+  font-weight: bold;
+  text-align: center;
 }
 textarea{
   width: 20vw;
   margin-top: 1rem;
-
+font-weight: bold;
+text-align: center;
   box-shadow: 1px 2px 2px black;
   margin-left: 2rem;
   border: 0;
+}
+
+.submitbtn{
+  background-color: #FD6E0A;
+  color: white;
+  width: 10vw;
+  height: 7vh;
+  border: none;
+  border-radius: 5px;
+  margin-left: 2rem;
+}
+
+.bug{
+  padding-left: 2rem;
 }
