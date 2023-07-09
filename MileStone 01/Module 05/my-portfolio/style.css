@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Tilt+Prism&family=Ubuntu&display=swap");
+
+#header-container {
+  height: 65vh;
+  background-color: #FFF8F3;
+  
+  background-image: url('./images/header_bg.png'), url('./images/developer.png');
+  background-repeat: no-repeat;
+  background-position:bottom right, top left;
+  background-size: 35%, 4%;
+}
+#navbar {
+  padding: 2rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.menu {
+  display: flex;
+  align-items: center;
+}
+.menuitem {
+  list-style: none;
+  margin: 0 2rem;
+}
+.inerR{
+    color: #FD6E0A;
+}
+.btn{
+    background-color: #FD6E0A;
+    color: white;
+    border: 0;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+.highlight-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5rem;
+}
+
+.highlight-content img{
+    height: 45.5vh;
+    position: relative;
+
+}
+.color_primary{
+  color: #757575;
+}
+.highlight-content h3,h1,p,button {
+  margin-top: 1rem;
+}
+.icodiv img{
+  height: 2vh;
+}
+/* header styles completed */
+
+/* about_section styles */
+.about_section{
+  height: 60vh;
+  width: 70vw;
+  background-color: #FFF8F3;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.innerDiv{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.innerDiv div{
+  margin: 0 2rem;
+  text-align: center;
+}
+
+.about_para{
+  padding: 0 5rem;
+  margin-top: 2rem;
+}
+/* about section designed */
+
+.what_i_do{
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+.whPara{
+  padding: 0 15rem;
+  margin-top: 2rem;
+}
+
+.boxdiv{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.box{
+  background-color: white;
+  height: 50vh;
+  width: 20vw;
+  margin:0 0.6rem;
+  border-radius: 8px;
+  box-shadow: 1px 2px 2px black;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.box img,h4,p{
+  padding: 15px 30px;
+
+}
+
+.box p{
+  color: #757575;
+}
+
+/* what i do section done */
+.resume_section>h1{
+  text-align: center;
+}
+.resume_info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.deepInnerDiv{
+  background-color: white;
+  height: 40vh;
+  width: 40vw;
+  margin: 1.5rem;
+  box-shadow: 1px 2px 2px black;
+  text-align: center;
+  border-radius: 6px;
+  /* padding: 0 100px; */
+}
+
+.deepInnerDiv h1{
+  padding: 1rem;
+}
+.deepInnerDiv p,h5{
+  color: #757575;
+}

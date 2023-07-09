@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown menubar</title>
+    <style>
+        nav{
+            background-color: black;
+            color: white;
+            height: 3rem;
+            display: flex;
+        }
+        ul{
+            display: flex;
+        }
+        li{
+            list-style: none;
+            margin-left: 2rem;
+            cursor: pointer;
+        }
+
+        .dropdown{
+            display: none;
+            color: red;
+            position: absolute;
+            background-color: black;
+            border: 2px solid red;
+        }
+        .color:hover .dropdown{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+        .inner{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li class="color">Color
+                <ul class="dropdown">
+                    <li class="inner">Home</li>
+                    <li class="inner">About</li>
+                    <li class="inner">Color</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

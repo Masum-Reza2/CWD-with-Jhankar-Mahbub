@@ -1,0 +1,4 @@
+font-family: 'Open Sans', sans-serif;
+font-family: 'Tilt Prism', cursive;
+font-family: 'Ubuntu', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Tilt+Prism&family=Ubuntu&display=swap");

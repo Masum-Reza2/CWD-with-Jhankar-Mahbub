@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+
+        th {
+            border-collapse: collapse;
+            /* border: 1px solid greenyellow; */
+            text-shadow: 1px 1px 1px red;
+            color: white;
+        }
+
+        td {
+            padding: 5px;
+            /* border: 1px solid greenyellow; */
+            margin: 5px;
+            width: 10vw;
+            text-align: center;
+            /* font-weight: bold; */
+            text-shadow: 1px 1px 1px red;
+            color: white;
+        }
+
+        .btn-p {
+            display: block;
+            width: 10vw;
+            margin: auto;
+        }
+
+        caption {
+            margin-bottom: 2rem;
+            font-weight: bold;
+        }
+
+        .video-background {
+            position: absolute;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .video-background video {
+            width: 100vw;
+        }
+        table {
+            border-collapse: collapse;
+            margin: auto;
+            margin-top: 5rem;
+            color: black;
+        }
+    </style>
+    <link rel="stylesheet" href="/project/index.css">
+</head>
+
+<body>
+    <div class="video-background">
+        <video autoplay loop muted src="./media/sam_vdo3.mp4"></video>
+    </div>
+    <button class="btn-p"><a href="./project/index.html">Goto Home</a></button>
+    <table>
+        <caption>Employee info</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Company</th>
+                <th>Age</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Masum Reza</td>
+                <td>Microsoft</td>
+                <td>22</td>
+                <td>$2000</td>
+            </tr>
+            <tr>
+                <td>Masum Reza</td>
+                <td>Microsoft</td>
+                <td>22</td>
+                <td>$2000</td>
+            </tr>
+            <tr>
+                <td>Masum Reza</td>
+                <td>Microsoft</td>
+                <td>22</td>
+                <td>$2000</td>
+            </tr>
+            <tr>
+                <td>Masum Reza</td>
+                <td>Microsoft</td>
+                <td>22</td>
+                <td>$2000</td>
+            </tr>
+            <tr>
+                <td>Masum Reza</td>
+                <td>Microsoft</td>
+                <td>22</td>
+                <td>$2000</td>
+            </tr>
+            <tr>
+                <td>Masum Reza</td>
+                <td>Microsoft</td>
+                <td>22</td>
+                <td>$2000</td>
+            </tr>
+            <tr>
+                <td>Masum Reza</td>
+                <td>Microsoft</td>
+                <td>22</td>
+                <td>$2000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">Total employee 4</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+.video-background {
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+.video-background video {
+    width: 100vw;
+}
+
+nav>ul{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.menus{
+    list-style: none;
+    margin-left: 20px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.menus:hover, .dropmenu:hover{
+    /* color: red; */
+    transform: translateY(-0.15rem)
+}
+.menus:active, .dropmenu:active{
+    color: red;
+    transform: translateY(0.15rem)
+}
+
+.dropdown{
+    display: none;
+    position: absolute;
+    width: 10vw;
+}
+
+.dropmenu, a{
+    font-size: 1rem;
+    list-style: none;
+    color: yellow;
+    margin-bottom: 4px;
+    text-shadow: 1px 1px 1px black;
+    text-decoration: none;
+}
+
+.show_dropdown:active, .show_dropdown:hover{
+    transform: translateY(0rem);
+    color: white;
+}
+
+.show_dropdown:hover .dropdown{
+    display: block;
+}
+
+
+#myform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 50vw;
+    margin: auto;
+    height: 70vh;
+    margin-top: 3rem;
+}
+.hprm{
+    font-weight: bold;
+    text-shadow: 1px 1px 1px red;
+    font-size: 2rem;
+    margin-left: 5rem;
+}
+.in_form{
+    display: flex;
+    flex-direction: column;
+}

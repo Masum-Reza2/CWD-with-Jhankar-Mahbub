@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khalar pitha Ghor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .video-background {
+            position: absolute;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .video-background video {
+            width: 100vw;
+        }
+
+        .myform {
+            display: flex;
+            flex-direction: column;
+            height: 90vh;
+            justify-content: start;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            text-shadow: 1px 1px 1px red;
+            margin-top: 1rem;
+        }
+
+        body {
+            color: white;
+        }
+
+        .formcls {
+            margin-top: 4rem;
+        }
+
+        .mylab {
+            display: flex;
+            flex-direction: column;
+            /* margin-top: 2rem; */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mylab_item {
+            width: 30vw;
+            text-align: center;
+            height: 5vh;
+            background: none;
+            font-weight: bold;
+            color: red;
+            margin: 2px;
+        }
+
+        ::placeholder {
+            color: white;
+            font-weight: bold;
+            /* font-size: 0.9rem; */
+        }
+
+        span {
+            text-align: left;
+            display: none;
+        }
+
+        .same_s {
+            margin-top: 1rem;
+            width: 30vw;
+            background: none;
+            height: 7vh;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            cursor: pointer;
+        }
+
+        .spl_ins {
+            width: 30vw;
+            color: rgb(34, 239, 34);
+            font-weight: bold;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        textarea {
+            color: transparent;
+            background-color: transparent;
+            color: white;
+            text-align: center;
+        }
+
+        .btn-p, a {
+            margin: 1rem 0.7rem;
+            width: 10vw;
+            height: 5vh;
+            border-radius: 9px;
+            cursor: pointer;
+            background-color: transparent;
+            color: white;
+            box-shadow: 2px 2px 2px red;
+            text-decoration: none;
+        }
+
+        .btn-p:hover {
+            transform: translateY(-0.15rem)
+        }
+
+        .btn-p:active {
+            transform: translateY(0.10rem)
+        }
+        .initial{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="video-background">
+        <video autoplay loop muted src="../media/sam_vdo2.mp4"></video>
+    </div>
+
+    <section>
+        <div class="initial">
+            <h1>Welcome to Khalar Pitha Ghor</h1>
+            <button class="btn-p"><a href="index.html">Goto Home</a></button>
+        </div>
+        <form class="myform" action="">
+            <h1 class="formcls">Please fill the form</h1>
+
+            <div class="mylab">
+                <label for="name"><span>Name:</span>
+                    <input class="mylab_item" type="text" name="" id="name" placeholder="Enter your Name">
+                </label>
+                <label for="number"><span>Number:</span>
+                    <input class="mylab_item" type="text" name="" id="number" placeholder="Enter your number">
+                </label>
+                <label for="email"><span>E-mail:</span>
+                    <input class="mylab_item" type="email" name="" id="email" placeholder="Enter your E-mail">
+                </label>
+                <label for="password"><span>Password:</span>
+                    <input class="mylab_item" type="password" name="" id="password" placeholder="Enter your Password">
+                </label>
+            </div>
+
+            <fieldset class="same_s">
+                <legend>Pick one pitha</legend>
+                <label for="chitoi">
+                    <input type="radio" name="pitha" id="chitoi">Chitoi
+                </label>
+                <label for="vapa">
+                    <input type="radio" name="pitha" id="vapa">Vapa
+                </label>
+                <label for="Mera">
+                    <input type="radio" name="pitha" id="Mera">Mera
+                </label>
+            </fieldset>
+
+            <fieldset class="same_s">
+                <legend>Pick one or more vorta</legend>
+                <label for="sorisa">
+                    <input type="checkbox" name="" id="sorisa">Sorisa
+                </label>
+                <label for="sutki">
+                    <input type="checkbox" name="" id="sutki">Sutki
+                </label>
+                <label for="chili">
+                    <input type="checkbox" name="" id="chili">Chili
+                </label>
+            </fieldset>
+
+            <fieldset class="spl_ins">
+                <legend>Special instructons</legend>
+                <textarea name="" id="" cols="50" rows="5"></textarea>
+            </fieldset>
+
+            <div class="btn">
+                <input class="btn-p" type="reset" value="Reset">
+                <input class="btn-p" type="submit" value="Submit">
+            </div>
+
+        </form>
+    </section>
+</body>
+
+</html>

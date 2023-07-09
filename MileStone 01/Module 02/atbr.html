@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* attribute selector */
+        input[type="password"]{
+            background-color: rgb(231, 146, 146);
+        }
+        .container{
+            height: 14vw;
+            width: 90vw;
+            background-color: red;
+            border: 2px solid black;
+            /* margin: 10px 20px; t-b l-r */
+            /* margin: 10px 20px 100px; t l-r b */
+            /* margin: 10px 20px 30px 100px; TRBL  */
+        }
+        .myone{
+            /* inline block elements have some problems while setting height width margin and padding */
+            height: 100px;
+            margin: 100px;
+            padding: 100px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="" id="">
+        <input type="password" name="" id="">
+    </form>
+
+    <div class="container">items</div>
+    <div class="container">items</div>
+    <div class="container">items</div>
+
+    <!-- inline block element -->
+    <span class="myone">this is a span tag</span>
+</body>
+</html>
