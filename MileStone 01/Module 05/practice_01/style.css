@@ -89,3 +89,37 @@
 .info_two ul>li{
     margin-top: 0.6rem;
 }
+/* info section completed */
+
+/* my plane section styles */
+.plan_section{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 2px black;
+}
+.inside_plane_section{
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.inside_plane_section img{
+    height: 7.6vh;
+}
+.inner_plan_div{
+    text-align: center;
+    margin: 0.4rem 2rem;
+}
+.inner_plan_div p{
+    color: #444343;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.inner_plan_div p,h3{
+    margin-top: 0.5rem;
+}
