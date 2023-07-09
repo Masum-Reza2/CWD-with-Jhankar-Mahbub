@@ -43,3 +43,49 @@
     color: #444343;
     padding-right: 8.5rem;
 }
+/* header section completed */
+
+.info_sectio{
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+}
+
+.info_one{
+    height: 70vh;
+    width: 25vw;
+    /* background-color: blue; */
+    margin: 0 1rem;
+}
+.info_one img{
+    height: 70vh;
+}
+
+.info_two{
+    height: 55vh;
+    width: 25vw;
+    /* background-color: blue; */
+    margin: 0 1rem;
+    text-align: justify;
+}
+.info_two h2{
+    padding-top: 0.6rem;
+}
+.info_two p{
+    text-align: left;
+    padding-right: 1.5rem;
+    color: #444343;
+}
+
+.info_two ul{
+    color: #444343;
+    list-style: none;
+    padding-left: 2rem;
+    margin-top: 1rem;
+}
+.info_two ul>li{
+    margin-top: 0.6rem;
+}
