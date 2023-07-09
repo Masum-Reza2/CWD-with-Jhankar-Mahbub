@@ -160,3 +160,19 @@
 .mindset_section h1{
     padding-left: 2.3rem;
 }
+
+
+/* footer styles */
+.footer_section{
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+}
+.footer_box{
+    height: 40vh ;
+    width: 25vw;
+    background-color: red;
+}
