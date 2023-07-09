@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header_section{
+    background-color: #efefef;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.headBox{
+    height:40vh;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem;
+}
+.headBox img{
+    height: 60vh;
+    margin-left: 10rem;
+}
+.headBox h1,p,button{
+    margin-top: 1rem;
+    text-align: right;
+    padding-right: 1.5rem;
+}
+.headBox button{
+    color: white;
+    background-color: #F15B22;
+    border: 0;
+    text-align: center;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    margin-left: 5rem;
+}
+.headBox p{
+    color: #444343;
+    padding-right: 8.5rem;
+}
