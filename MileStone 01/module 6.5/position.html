@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            height: 200vh;
+            width: 95vw;
+            /* position: relative; */
+            /* parent container position required only when child is absolute and want to move according his parent */
+        }
+
+        /* .box{
+            background-color: blue;
+            height: 40px;
+            width: 40vw;
+            position: relative;
+            top: 200px;
+            right: 100px;
+        } */
+        /* .box{
+            background-color: blue;
+            height: 40px;
+            width: 40vw;
+            position: absolute;
+            in the parent container is relative then it will move according to its parent. else it will move according the viewport website
+            bottom: 0;
+            right: 0;
+            top: 0;
+            left: 0;
+        } */
+        /* .box {
+            background-color: blue;
+            height: 40px;
+            position: sticky;
+            sticky will stay till its parent stay,when parent gone it will also gone
+            top: 100px;
+        } */
+        .box {
+            background-color: blue;
+            height: 40px;
+            width: 95vw;
+            position: fixed;
+            /* fixed don't care about the limitation of it's parent */
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">item</div>
+    </div>
+    <div class="container"></div>
+</body>
+
+</html>

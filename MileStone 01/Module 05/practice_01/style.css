@@ -201,19 +201,31 @@ h3 {
   border: 0;
   font-weight: bold;
 }
-.pseudo_footer_box h1,p{
-    text-align: left;
+.pseudo_footer_box h1,
+p {
+  text-align: left;
 }
-.pseudo_footer_box p{
-    color: white;
-    opacity: 0.7;
+.pseudo_footer_box p {
+  color: white;
+  opacity: 0.7;
 }
-.footer_img{
-    display: flex;
-    flex-direction: row;
-    height: 5.5vh;
-    margin-top: 1rem;
+.footer_img {
+  display: flex;
+  flex-direction: row;
+  height: 5.5vh;
+  margin-top: 1rem;
 }
-.footer_img img{
-    padding: 0 3px;
+.footer_img img {
+  padding: 0 3px;
 }
+
+button{
+    cursor: pointer;
+}
+button:hover {
+  transform: translateY(-0.13rem);
+}
+button:active {
+  transform: translateY(0.13rem);
+}
+
