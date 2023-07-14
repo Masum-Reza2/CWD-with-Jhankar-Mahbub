@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .container{
+        border: 1px solid red;
+        height: 100vh;
+        display: grid;
+        /* grid-template-columns: 100px 100px 200px; */
+        grid-template-columns: repeat(7,50px);
+        grid-template-rows: repeat(5, 30px);
+        place-content: center;
+        grid-gap: 1rem;
+        /* place-items: center; */
+       }
+       .box{
+        border: 1px solid red;
+        background-color: blueviolet;
+        display: grid;
+        /* place-content: center; */
+        place-items: center;
+       }
+       .box:nth-child(1){
+        background-color: red;
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 3;
+       }
+
+       @media screen and (max-width:500px) {
+        .box{
+            color: white;
+            background-color: black;
+        }
+        .container{
+            grid-template-columns: repeat(7,20px);
+            grid-template-rows: repeat(5, 20px);
+        }
+        .box:nth-child(1){
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 1;
+        }
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+        <div class="box">11</div>
+        <div class="box">12</div>
+        <div class="box">13</div>
+        <div class="box">14</div>
+        <div class="box">15</div>
+        <div class="box">16</div>
+        <div class="box">17</div>
+        <div class="box">18</div>
+        <div class="box">19</div>
+        <div class="box">20</div>
+        <div class="box">21</div>
+        <div class="box">22</div>
+        <div class="box">23</div>
+        <div class="box">24</div>
+        <div class="box">25</div>
+        <div class="box">26</div>
+        <div class="box">27</div>
+        <div class="box">28</div>
+        <div class="box">29</div>
+        <div class="box">30</div>
+    </div>
+</body>
+</html>
