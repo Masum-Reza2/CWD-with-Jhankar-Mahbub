@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            height: 100vh;
+            grid-template-columns: repeat(12,1fr);
+            grid-template-rows: repeat(12,1fr);
+            grid-gap: 5px;
+        }
+        .item{
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        .item_1{
+            background-color: gray;
+            grid-column: 1/13;
+            /* grid-column: 1 / span 13; */
+            /* grid-column: span 13; */
+        }
+        .item_2{
+            background-color: blue;
+            grid-column: 1/4;
+            grid-row: 2/10;
+        }
+        .item_3{
+            background-color: orange;
+            grid-column: 4/13;
+        }
+        .item_4{
+            background-color: green;
+            grid-column: 4/7;
+            grid-row: 3/10;
+        }
+        .item_5{
+            grid-column: 7/10;
+            background-color: green;
+            grid-row: 3/10;
+        }
+        .item_6{
+            grid-column: 10/13;
+            background-color: green;
+            grid-row: 3/10;
+
+        }
+        .item_7{
+            background-color: red;
+            grid-column: 1/13;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item_1 item">Header</div>
+        <div class="item_2 item">Nav</div>
+        <div class="item_3 item">Title</div>
+        <div class="item_4 item">Article</div>
+        <div class="item_5 item">Article</div>
+        <div class="item_6 item">Article</div>
+        <div class="item_7 item">Footer</div>
+    </div>
+</body>
+</html>
