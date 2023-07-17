@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Animation</title>
+    <style>
+        .bat{
+            height: 50vh;
+            border-radius: 9px;
+            width: 5vw;
+            /* background-color: blue; */
+            transform: rotate(50deg);
+            transform-origin: top;
+            transition: transform 0.2s ease-out;
+            transform-origin: top;
+        }
+        .bat img{
+            height: 100%;
+            /* width: 100%; */
+        }
+        .ball{
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            border-radius: 50%;
+            left: 10px;
+            position: relative;
+            /* left: 400px; */
+            transition: transform 0.5s ease-in-out 0.2s;
+        }
+        .field:hover .ball{
+            transform: translateX(500px) translateY(-200px);
+        }
+        .field{
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10rem;
+        }
+        .field:hover .bat{
+            transform: rotate(-45deg);
+            transform-origin: top;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="field">
+        <div class="bat">
+            <img src="cricbuz.png" alt="">
+        </div>
+        <div class="ball">
+
+        </div>
+    </div>
+
+</body>
+
+</html>
