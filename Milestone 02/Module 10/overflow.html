@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css3</title>
+    <style>
+        .box{
+            border: 2px solid red;
+            width: 300px;
+            height: 300px;
+            overflow: auto;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        /* #box-1{
+            overflow: scroll;
+            overflow-x: hidden;
+        } */
+       
+        .ellipsis{
+            border: 2px solid red;
+            width: 200px;
+            /* nowrap is an whitespace: nowrap; useful property */
+            white-space: nowrap;
+            overflow: auto;
+            overflow-y: hidden;
+            /* text-overflow: ellipsis; */
+            /* text-overflow: clip; */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, inventore.elit. Doloremque, inventore." class="ellipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, inventore.elit. Doloremque, inventore.</p>
+    </header>
+    <section>
+        <div id="box-1" class="box">
+            <h1>heading 1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit, accusamus. Officiis animi autem ipsum voluptatum qui iste repudiandae eos, perferendis et, exercitationem voluptate molestiae debitis corrupti blanditiis alias mollitia adipisci deserunt neque, eaque officia? Quaerat eius facilis voluptatum quasi dicta! Neque quibusdam nesciunt, aliquam doloremque iusto, natus tempora voluptates delectus sed accusamus nam inventore sunt amet error mollitia facilis corporis soluta. Voluptas tempore at eaque autem quod corrupti deleniti eveniet voluptates? Quo mollitia quos quidem repudiandae vel, dolore atque voluptates, laboriosam nam labore quod, recusandae totam quaerat dignissimos nesciunt corrupti est. Temporibus assumenda veniam eligendi deleniti ipsa deserunt saepe consequuntur voluptas ex nobis rem, incidunt nostrum? Sequi provident veritatis numquam hic ad dolorum necessitatibus magnam perspiciatis sit, vel laboriosam dolor non qui in accusantium nesciunt libero laborum amet impedit. Nisi ipsum dolores adipisci mollitia sint quo, ipsa perferendis iste quasi ipsam unde. Nesciunt pariatur in ut? Possimus consequatur atque commodi ea sed, beatae nesciunt, illum quaerat sequi officia animi iste autem debitis. Rem dolorem assumenda labore numquam illo animi officiis similique in itaque ullam cumque magnam mollitia, sit porro veritatis culpa obcaecati neque enim quos repellat incidunt! Ipsam necessitatibus itaque iste ipsum ipsa dolore commodi ad, aliquid accusamus deleniti ratione?</p>
+        </div>
+        <div id="box-2" class="box">
+            <h1>heading 1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit, accusamus. Officiis animi autem ipsum voluptatum qui iste repudiandae eos, perferendis et, exercitationem voluptate molestiae debitis corrupti blanditiis alias mollitia adipisci deserunt neque, eaque officia? Quaerat eius facilis voluptatum quasi dicta! Neque quibusdam nesciunt, aliquam doloremque iusto, natus tempora voluptates delectus sed accusamus nam inventore sunt amet error mollitia facilis corporis soluta. Voluptas tempore at eaque autem quod corrupti deleniti eveniet voluptates? Quo mollitia quos quidem repudiandae vel, dolore atque voluptates, laboriosam nam labore quod, recusandae totam quaerat dignissimos nesciunt corrupti est. Temporibus assumenda veniam eligendi deleniti ipsa deserunt saepe consequuntur voluptas ex nobis rem, incidunt nostrum? Sequi provident veritatis numquam hic ad dolorum necessitatibus magnam perspiciatis sit, vel laboriosam dolor non qui in accusantium nesciunt libero laborum amet impedit. Nisi ipsum dolores adipisci mollitia sint quo, ipsa perferendis iste quasi ipsam unde. Nesciunt pariatur in ut? Possimus consequatur atque commodi ea sed, beatae nesciunt, illum quaerat sequi officia animi iste autem debitis. Rem dolorem assumenda labore numquam illo animi officiis similique in itaque ullam cumque magnam mollitia, sit porro veritatis culpa obcaecati neque enim quos repellat incidunt! Ipsam necessitatibus itaque iste ipsum ipsa dolore commodi ad, aliquid accusamus deleniti ratione?</p>
+        </div>
+        <div class="box">
+            <h1>text box 3</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, natus sint possimus, autem hic rem quo saepe numquam temporibus omnis soluta aliquam inventore provident, amet repellat doloremque id cumque. Libero.</p>
+        </div>
+    </section>
+</body>
+</html>
