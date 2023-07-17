@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .stage{
+            height: 60vh;
+            width: 70vw;
+            background-color: aqua;
+            border: 2px solid black;
+        }
+        .ball{
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+            border-radius: 50%;
+            position: relative;
+            /* animation: ping-pong 2s ease-in-out 2s 2 forwards ; */
+            /* animation: ping-pong 3s ease-in-out 1s infinite both alternate; */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* animation: bounce 3s ease-in-out 1s infinite both alternate; */
+            animation: bounce-pro 1s ease-out infinite both alternate;
+            margin: auto;
+        }
+        @keyframes bounce-pro {
+            from{
+                top: 255px;
+            }
+            to{
+                top: 0;
+            }
+        }
+        @keyframes ping-pong {
+            from {
+                left: 0;
+            }
+            to{
+                left: 300px;
+                /* background-color: red;
+                transform: scale(2) translateY(2rem); */
+            }
+        }
+        @keyframes bounce {
+            0%{
+                transform: scale(1.2);
+                background-color: red;
+            }
+            25%{
+                transform: scale(1.2);
+                background-color: gray;
+                left: 100px;
+            }
+            50%{
+                transform: scale(1.2);
+                background-color: brown;
+                left: 200px;
+            }
+            70%{
+                transform: scale(1.2);
+                background-color: chocolate;
+                left: 300px;
+            }
+            100%{
+                transform: scale(1.2);
+                background-color: blue;
+                left: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stage">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
