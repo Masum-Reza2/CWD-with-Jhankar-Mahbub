@@ -1,0 +1,4 @@
+image optimization is an important thing for web development.
+Heavy images overload the website make it more lengthy while loading.
+
+famous online image compression link: https://www.photopea.com/

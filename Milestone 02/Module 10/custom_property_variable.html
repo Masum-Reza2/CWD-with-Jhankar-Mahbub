@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom property or variable</title>
+    <style>
+        .container{
+            /* example of local variable limited to this scope only */
+            --border-primary: 2px solid black;
+            --border-secondary: 1px solid red;
+            --primary-background: red;
+
+
+            border: var(--border-primary);
+            background-color: var(--primary-background);
+        }
+        .box_con{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .box{
+            height: 20vh;
+            width: 20vw;
+            /* here it will never work because (--primary-background) was a local variabl. only valid for that one block  */
+            background-color: var(--primary-background);  
+            background-color: var(--primary-back);
+        }
+
+        /* example of global variable */
+        :root{
+            --primary-back: yellow;
+            --primary-border: 1px solid black;
+            --color-primary: lightblue;
+        }
+        .box-1{
+            color: var(--color-primary);
+            border: var(--primary-border);
+        }
+
+
+
+        /* understanding calc() */
+        .first{
+            background-color: blue;
+        }
+        .second{
+            background-color: red;
+        }
+        main{
+            margin-top: 1rem;
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: 200px calc(100% - 200px - 1rem);
+            grid-template-rows: 500px;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>This is the heading tag</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perferendis magnam iure labore, accusamus minus odio quisquam, beatae ratione pariatur impedit? Magnam similique quasi libero illum esse repellendus, dolor eum?</p>
+        </div>
+
+        <div class="box_con">
+        <div class="box box-1"></div>
+        <div class="box box-2"></div>
+        <div class="box box-3"></div>
+        <div class="box box-4"></div>
+        <div class="box box-5"></div>
+    </div>
+    </header>
+
+    <main>
+        <div class="first">
+
+        </div>
+        <div class="second">
+            
+        </div>
+    </main>
+    
+</body>
+</html>
