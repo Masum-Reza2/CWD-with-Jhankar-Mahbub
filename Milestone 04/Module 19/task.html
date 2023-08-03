@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //problem 01 solved
+        // function foo(){
+        //     console.log('foo');
+        //     bar();
+        // }
+        // function bar(){
+        //     console.log('bar')
+        // }
+
+        // foo();
+
+
+        //problem 02 solved
+        function make_avg(a, b, c) {
+            let sum = a + b + c;
+            let avg = sum / 3;
+            return console.log(avg)
+        }
+
+        make_avg(2, 3, 4);
+
+        //problem 03
+
+        let myarray = [2, 4, 5, 7, 9];
+        function myAvg() {
+
+            let a = myarray.reduce((a, b) => {
+                return a + b;
+            })
+            return a / myarray.length;
+        }
+        console.log(myAvg());
+
+        //problem 04 solved
+        // let num = 10;
+        function odd_even(num){
+            if(num%2===0){
+                console.log('this is an odd Number.')
+            }
+            else{
+                console.log('This is an even number.')
+            }
+        }
+        odd_even(1);
+
+        //problem 05
+        let signal = 'yellow';
+
+        if(signal==='red'){
+            console.log('Stop Danger signal ')
+        }
+        else if(signal==='yellow'){
+            console.log('Get ready to move')
+        }
+        else if(signal==='green'){
+            console.log('It\'s your turn move ')
+        }
+        
+    </script>
+</body>
+
+</html>
