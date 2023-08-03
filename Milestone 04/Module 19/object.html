@@ -17,12 +17,17 @@
         }
 
         console.log(myobj);
-        
-        let key = Object.keys(myobj);
-        console.log(key);
-        for(let i =0; i<key.length; i++){
-            console.log(key[i], 'keys')
-            console.log(myobj[key[i]], 'values')
+
+        // let key = Object.keys(myobj);
+        // console.log(key);
+        // for(let i =0; i<key.length; i++){
+        //     console.log(key[i], 'keys')
+        //     console.log(myobj[key[i]], 'values')
+        // }
+
+        for (let key in myobj) {
+            console.log(key); //key
+            console.log(myobj[key]); //value
         }
 
     </script>
