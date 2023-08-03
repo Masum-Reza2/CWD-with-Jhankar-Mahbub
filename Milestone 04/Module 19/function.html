@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function in js</title>
+</head>
+<body>
+    <script>
+
+        // function greet(name){
+        //     console.log(`hi ${name}`)
+        // }
+
+        // greet('Reza');
+
+        let greet = (name)=>{
+            console.log(`Hello ${name}. How are you`)
+        }
+
+        greet('Masum');
+
+        let myobj = {
+            name: 'Maaum', 
+            age : 22,
+            profession : 'Developer'
+        }
+
+        console.log(myobj)
+        console.log(myobj['name']);
+        myobj.name = 'Uzzal'
+        console.log(myobj)
+        
+        let myfunc = () =>{
+            return myobj.profession = 'App Developer';
+        }
+        
+        myfunc();
+        // when we dont know the keys butn want to get them.
+        console.log(Object.keys(myobj));
+        console.log(Object.values(myobj));
+        
+    </script>
+</body>
+</html>
