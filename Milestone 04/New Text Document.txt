@@ -1,0 +1,2 @@
+introduction to javascript.
+i learned before from code with harry.

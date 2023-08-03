@@ -19,13 +19,47 @@
     //     }
     // }        
 
-        let a = 0;
-        while (a<=10) {
-            console.log(a);
-            a++;
-            if (a>6) {
-                break;
+        // let a = 0;
+        // while (a<=10) {
+        //     console.log(a);
+        //     a++;
+        //     if (a>6) {
+        //         break;
+        //     }
+        // }
+
+        // let arr = ['am', 'jam', 'kathal', 'lichu', 'banana', 'piyara']
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     let item = arr[i];
+        //    console.log(item)
+        //     if(item == 'lichu'){
+        //         break;
+        //     }
+        // }
+
+
+        // let arr = [10, 20, 40, 50, 70, 100, 120, 130, 150]
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     let item = arr[i];
+        //    console.log(item)
+        //     if(item > 70){
+        //         break;
+        //     }
+        // }
+
+        
+        
+        let arr = [10, 20, 40, 50, 70, 100, 120, 130, 150]
+
+        for (let i = 0; i < arr.length; i++) {
+            let item = arr[i];
+            if(item > 50){
+                continue;
             }
+            // the command continue will skip the condition items;
+            console.log(item);
         }
 
     </script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        console.log('Hello world');
+        let myobj = {
+            name : 'Masum Reza',
+            age : 22,
+            profession : 'Developer',
+            hobby : 'Coding'
+        }
+
+        console.log(myobj);
+        
+        let key = Object.keys(myobj);
+        console.log(key);
+        for(let i =0; i<key.length; i++){
+            console.log(key[i], 'keys')
+            console.log(myobj[key[i]], 'values')
+        }
+
+    </script>
+</body>
+</html>
