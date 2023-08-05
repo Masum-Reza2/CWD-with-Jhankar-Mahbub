@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log('hello world')
+        //Get the sum of an array
+        function arraySum(arr) {
+            let sum = 0;
+            for (let i of arr) {
+                sum += i;
+            }
+            return sum;
+        }
+
+        let myArray = [2, 4, 1, 2, 3];
+        let result = arraySum(myArray);
+        console.log(result);
+
+        //Get the largest number from an array
+        function findBig(x) {
+
+            let largest = x[0];
+
+            for (let i = 0; i < x.length; i++) {
+                let currentItem = x[i];
+                if (currentItem > largest) {
+                    largest = currentItem;
+                }
+            }
+            return ('The largest number of the array is = ' + largest);
+        }
+
+        let mrArray = [1, 200, 2, 3, 5, 101, 7, 8, 12, 34, 56]
+        let result2 = findBig(mrArray);
+        console.log(result2);
+
+
+        //find the Biggest length friend from an array
+
+        function biggetsFriend(friends) {
+
+            let biggest = friends[0];
+
+            for (let i = 0; i < friends.length; i++) {
+
+                if (friends[i].length > biggest.length) {
+                    biggest = friends[i]
+                }
+
+            }
+            return ('The largest length friend is '+biggest)
+
+        }
+
+        let myFriend = ['masum', 'rana', 'tana', 'khamana', 'mosaddek-mia'];
+        let result3 = biggetsFriend(myFriend);
+        console.log(result3)
+
+        //validation of an function 
+        function sum (a,b){
+            if(typeof a !== 'number' || typeof b !== 'number'){
+                return 'Please give me a number not a string'
+            }
+            return a+b;
+        }
+
+        let x = sum(2,5);
+        let y = sum('2',5);
+        console.log(x)
+        console.log(y)
+
+    </script>
+</body>
+
+</html>
