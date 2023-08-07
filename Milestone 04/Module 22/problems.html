@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log('Hi hi hello hello, welcome to problem solvign');
+
+        //feet to inch calculator
+        function feetToInch(feet) {
+            let inch = feet * 12;
+            return (`${feet} feet is = ${inch} inch`);
+        }
+
+        let result = feetToInch(5);
+        console.log(result);
+
+        //centimeter to meter calculator
+        function centimeterToMeter(centimeter) {
+            let meter = centimeter / 100;
+            return (`${centimeter} centimeter is = ${meter} meter`)
+        }
+
+        let result2 = centimeterToMeter(500);
+        console.log(result2);
+
+
+        //paper requirements
+        function paperRequirements(book1, book2, book3) {
+            let book1Paper = 100;
+            let book2Paper = 200;
+            let book3Paper = 300;
+
+            let book1PaperCount = book1 * book1Paper;
+            let book2PaperCount = book2 * book2Paper;
+            let book3PaperCount = book3 * book3Paper;
+
+            let totalPaper = book1PaperCount + book2PaperCount + book3PaperCount;
+
+            let message = `Quantity of book1 is ${book1} quantity of book2 is ${book2} and quantity of book3 is ${book3}`;
+
+            let message2 = `Paper for ${book1} is = ${book1PaperCount}, paper for ${book2} is = ${book2PaperCount} and paper for ${book3} is = ${book3PaperCount}`
+
+            return (`Total paper required = ${totalPaper} \n${message} \n${message2}`);
+
+        }
+
+        let book1Quantity = 1;
+        let book2Quantity = 1;
+        let book3Quantity = 1;
+
+        let result3 = paperRequirements(book1Quantity, book2Quantity, book3Quantity);
+        console.log(result3);
+
+
+        //best Friend
+        let friendList = ['alom', 'khalum', 'malum', 'zalim', 'abdullah', 'mohibullah', 'Khan jahan ali', 'Ali bordi khan', 'iftekhar ahmed mohammad bin bokhtiar iyoj khalji']
+
+        function bestFriend(arr) {
+
+            let bigFan = arr[0];
+
+            for (let i = 0; i < arr.length; i++) {
+                let item = arr[i];
+                if (item.length > bigFan.length) {
+                    bigFan = item;
+                }
+            }
+
+            return bigFan;
+
+        }
+
+        let result4 = bestFriend(friendList);
+        console.log('Your long lengthy friend is >>>', result4);
+
+
+        //only positive numbers 
+        let numberArray = [2, 34, 45, 56, -5, 78, 35, -12, -45, -56];
+
+        function onlyPositive(arr) {
+
+            let positives = [];
+            
+            for (let i = 0; i < arr.length; i++) {
+                let item = arr[i];
+                if (item < 0) {
+                    break;
+                }
+                positives.push(item);
+            }
+
+            return positives;
+        }
+
+        let result5 = onlyPositive(numberArray);
+        console.log(result5);
+
+
+    </script>
+</body>
+
+</html>
