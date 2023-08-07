@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log('helllo! hello! how are you! get the cheapest phone')
+
+        let phones = [
+            { name: 'samsung', camera: 10, price: 32000 },
+            { name: 'Redmi', camera: 13, price: 22000 },
+            { name: 'Nokia', camera: 16, price: 25000 },
+            { name: 'Xiaomi', camera: 12, price: 35000 },
+            { name: 'Oppo', camera: 20, price: 42000 },
+            { name: 'Iphone', camera: 0, price: 82000 },
+        ]
+
+
+        function getCheapest(arr) {
+
+            let cheapest = arr[0];
+
+            for (let i = 0; i < arr.length; i++) {
+                let phone = arr[i];
+                if (phone.price < cheapest.price) {
+                    cheapest = phone;
+                }
+            }
+
+            return cheapest;
+
+        }
+
+        let result = getCheapest(phones);
+        console.log(result);
+        // console.log(phones)
+    </script>
+</body>
+
+</html>

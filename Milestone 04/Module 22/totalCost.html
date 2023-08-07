@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log('Your total cost today');
+
+        let shoppingItem = [
+            {name : 'iphone', price: 82000},
+            {name : 'shirt', price: 590},
+            {name : 'pant', price: 780},
+            {name : 'belt', price: 290},
+            {name : 'Eye-laner', price: 800},
+            {name : 'Maskara', price: 1200},
+        ]
+        
+        function calculator (arr){
+            let sum = 0;
+            for(let i=0; i<arr.length; i++){
+                let item = arr[i];
+                sum += item.price;
+            }
+            console.log('Today your total cost is ')
+            return sum;
+        }
+
+        let result = calculator(shoppingItem);
+        console.log(result);
+
+        
+    </script>
+</body>
+</html>

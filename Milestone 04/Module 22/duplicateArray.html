@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log('Duplicate item operation of an array')
+
+        let myArray = ['abul', 'babul', 'cabul', 'dabul', 'ibul', 'tabul', 'mabul', 'abul', 'kabul', 'abul', 'cabul'];
+
+        function removeDuplicate(arr) {
+            let unique = [];
+            for (let i = 0; i < arr.length; i++) {
+                let item = arr[i];
+                // console.log(item);
+                if (unique.includes(item) == false) {
+                    unique.push(item);
+                }
+            }
+            return unique;
+        }
+
+        let result = removeDuplicate(myArray);
+        
+        console.log(result);
+
+    </script>
+</body>
+
+</html>

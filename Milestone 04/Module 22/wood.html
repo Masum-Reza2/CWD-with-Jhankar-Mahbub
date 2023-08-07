@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log('wood calculator');
+
+        function woodCalculator(chairQntt, tableQntt, bedQntt) {
+            let perChairWood = 3;
+            let perTableWood = 10;
+            let perBedWood = 50;
+
+            let chairWood = chairQntt * perChairWood;
+            let tableWood = tableQntt * perTableWood;
+            let bedWood = bedQntt * perBedWood;
+
+            let totalWood = chairWood + tableWood + bedWood;
+
+            return totalWood;
+            
+        }
+
+        let chair = 1;
+        let table = 1;
+        let bed = 1;
+
+        let result = woodCalculator(chair, table, bed);
+        console.log(result);
+
+    </script>
+</body>
+
+</html>
