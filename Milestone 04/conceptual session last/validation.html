@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log('Hello world');
+
+        function bioData (obj){
+            if(typeof obj !== 'object'){
+                return 'Please provide me an object'
+            }else{
+                let name = obj.name || 'Nai';
+                let age = obj.age || 'Nai';
+                let profession = obj.profession || 'Nai';
+                let bow = obj.bow || 'Ace';
+                let gf = obj.gf || 'Nai'
+                
+                let sentence = `Amar nam ${name}. Amar boyos ${age}, Ami akjon ${profession}, Amar bow ${bow} and amar GirlFriend ${gf}`;
+
+                return sentence;
+                
+            }
+        }
+        
+        let x = {
+            name : 'Masum', 
+            age : 22, 
+            profession : 'developer',
+        };
+
+        let result = bioData(x);
+        console.log(result);
+        
+    </script>
+</body>
+</html>
