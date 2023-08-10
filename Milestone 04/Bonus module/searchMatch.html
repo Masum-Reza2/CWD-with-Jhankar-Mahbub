@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log('let\'s learn how to search from an array');
+
+        let products = [
+            { type: 'phone', name: 'Samsung S20 Altra', price: 31000 },
+            { type: 'phone', name: 'Samsung 20s', price: 31000 },
+            { type: 'phone', name: 'Redmi Note 10 lite', price: 21000 },
+            { type: 'phone', name: 'Redmi Note 8 pro', price: 18000 },
+            { type: 'phone', name: 'Realme c25', price: 11000 },
+            { type: 'phone', name: 'Realme Narzo 50', price: 15000 },
+
+            { type: 'laptop', name: 'MacBook Air', price: 211000 },
+            { type: 'laptop', name: 'Ryzon 7I', price: 81000 },
+            { type: 'laptop', name: 'hp EliteBook', price: 41100 },
+            { type: 'laptop', name: 'Dell Latitute 876s', price: 51100 },
+            { type: 'laptop', name: 'Lenovo', price: 41100 },
+        ]
+
+        function SearchGadget(arr, search) {
+
+            let searchItem = [];
+
+            for (let item of arr) {
+
+                let itemName = item.name.toLowerCase();
+                let searchName = search.toLowerCase();
+
+                if (itemName.includes(searchName)) {
+                    searchItem.push(itemName + ` price:${item.price} type: ${item.type}`);
+                }
+            }
+
+            if(searchItem.length <= 0){
+                return 'Item not found'
+            }
+
+            return searchItem;
+
+        }
+
+        let search = 'redmi';
+        let result = SearchGadget(products, search);
+        console.log(result);
+
+    </script>
+</body>
+
+</html>
