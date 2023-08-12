@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM in js </title>
+</head>
+<body>
+    <h1>Welcome to DOM</h1>
+    <ul>
+        <li>De de dom de re baba</li>
+        <li>Pagla babar DOM</li>
+        <li>DOM a kulaitace na</li>
+        <li>Pakka DOM ace re baba</li>
+        <li>Hay jalalli </li>
+    </ul>
+
+
+    <script>
+        let liCollection = document.getElementsByTagName('li');
+        //here it is a html Collection
+        console.log(liCollection);
+
+        let liCollectionArray = Array.from(liCollection);
+        //here it is an array
+        console.log(liCollectionArray);
+        //we can apply loops 
+        
+        for(let item of liCollection){
+            console.log(item.innerHTML);
+            console.log(item.innerText);
+        }
+    </script>
+</body>
+</html>
