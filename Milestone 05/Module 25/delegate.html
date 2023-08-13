@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section >
+        <h1>Welcome to delegate</h1>
+        <button id="addMore">Add more</button>
+        <ul id="liContainer">
+            <li class="item">Lorem ipsum dolor sit amet.1</li>
+            <li class="item">Lorem ipsum dolor sit amet.2</li>
+            <li class="item">Lorem ipsum dolor sit amet.3</li>
+            <li class="item">Lorem ipsum dolor sit amet.4</li>
+            <li class="item">Lorem ipsum dolor sit amet.5</li>
+        </ul>
+        
+    </section>
+
+    <script>
+        // evenet Bubble : Propagating an event from the lowest to the upward
+        
+        // const items = document.getElementsByClassName('item');
+        // for (let item of items) {
+        //     item.addEventListener('click', (() => {
+        //         console.log(event.target);
+        //         //Gayebul Hawa
+        //         event.target.parentNode.removeChild(event.target);
+        //     }))
+        // }
+
+        document.getElementById('liContainer').addEventListener('click', (()=>{
+            console.log(event.target);
+            event.target.parentNode.removeChild(event.target);
+        }))
+        // so we understand that event should be handle on parent this is the power of delegation
+
+        document.getElementById('addMore').addEventListener('click', (() => {
+            let liContainer = document.getElementById('liContainer');
+            let li = document.createElement('li');
+            li.innerText = 'Brand new li Element';
+            li.classList.add('item')
+            liContainer.appendChild(li);
+        }))
+    </script>
+
+</body>
+
+</html>

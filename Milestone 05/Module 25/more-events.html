@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Confirmation</title>
+</head>
+
+<body>
+    <h1>Explore more events</h1>
+    <button id="more_btn">Events</button>
+    <input type="text" name="" id="input-field">
+
+
+    <script>
+        document.getElementById('more_btn').addEventListener('mouseup', (() => {
+            console.log('event triggered')
+        }));
+
+
+        document.getElementById('input-field').addEventListener('focus', (() => {
+            console.log('input field in focus mode')
+        }));
+        
+        document.getElementById('input-field').addEventListener('blur', (() => {
+            console.log('input field in blur mode')
+        }));
+
+        document.getElementById('input-field').addEventListener('keyup', ((event) => {
+            console.log(event.target.value)
+        }))
+    </script>
+</body>
+
+</html>

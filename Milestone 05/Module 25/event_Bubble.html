@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            border: 2px solid red;
+        }
+        ul{
+            border: 2px solid black;
+        }
+        h1{
+            border: 2px solid green;
+        }
+        #li-2{
+            border: 2px solid yellow;
+        }
+    </style>
+</head>
+<body id="body">
+    <section id="mySection">
+
+        <h1 id="heading">Welcome to Bubble Bhai</h1>
+        <ul id="myUL">
+            <li id="li-1">Lorem, ipsum dolor.</li>
+            <li id="li-2">Lorem, ipsum dolor.</li>
+            <li id="li-3">Lorem, ipsum dolor.</li>
+            <li id="li-4">Lorem, ipsum dolor.</li>
+            <li id="li-5">Lorem, ipsum dolor.</li>
+        </ul>
+
+    </section>
+
+    <script>
+
+        //when we click the inner one all event outside it got fired it is called event bubble. rather than we can handle it by some build in function
+        
+        document.getElementById('li-2').addEventListener('click', (()=>{
+            console.log('li 2 got clicked');
+            event.stopPropagation;
+        }));
+
+        document.getElementById('myUL').addEventListener('click', (()=>{
+            console.log('myUL got clicked');
+            event.stopImmediatePropagation;
+        }));
+
+        document.getElementById('heading').addEventListener('click', (()=>{
+            console.log('heading got clicked')
+        }));
+
+        document.getElementById('mySection').addEventListener('click', (()=>{
+            console.log('mySection got clicked')
+        }));
+
+        document.getElementById('body').addEventListener('click', (()=>{
+            console.log('body got clicked')
+        }));
+    </script>
+</body>
+</html>
