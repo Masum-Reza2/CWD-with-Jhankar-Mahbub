@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event in js</title>
+</head>
+
+<body>
+    <h1 onclick="console.log('Beta heading me kon onclick marta hai!'), setTimeout(() => {
+        document.body.innerHTML = '<h1>You bloody cheap add event listener on heading</h1>'
+    }, 2000);">DOM er aje Special Event</h1>
+    <button onclick="console.log('Good choice, click shound be on button')">Click me</button>
+    <button onclick="console.log('beta 2sra button pe bhi thus diya')">Another click me</button>
+    <!-- till now we see onclick inside the html  -->
+    <button onclick="document.body.style.backgroundColor = 'yellow'">Bg-Yellow</button>
+    <button onclick="document.body.style.backgroundColor = 'red'">Bg-Red</button>
+
+    <!-- now i will handle the event from js file -->
+    <button onclick="bgOrange()">Bg orange</button>
+    <button id="makeBlue">MakeBlue</button>
+
+    <button id="make_pink">Make Pink</button>
+
+    <!-- final by jhankar mahbub -->
+    <button id="make_goldenrod">Make GoldenRod</button>
+
+    <script>
+        console.log('Welcome to event of js DOM')
+        let bgOrange = () => {
+            document.body.style.backgroundColor = 'orange'
+        }
+
+        // option 02
+        let makeBlue = document.getElementById('makeBlue');
+        
+
+        // makeBlue.onclick = (()=>{
+        //     document.body.style.backgroundColor = 'blue';
+        // })
+
+        let blueMaker = () => {
+            document.body.style.backgroundColor = 'blue';
+        }
+        makeBlue.onclick = blueMaker;
+
+        //addEventListener
+        let make_pink = document.getElementById('make_pink');
+
+        let pinkMaker = () => {
+            document.body.style.backgroundColor = 'pink';
+        }
+
+        // make_pink.addEventListener('click', pinkMaker)
+
+        //rather than we can also use this same just direct function
+        make_pink.addEventListener('click', (() => {
+            document.body.style.backgroundColor = 'pink';
+            console.log('pink clicked')
+        }))
+
+        // jhankar dada says that he will apply eventListener like this
+        document.getElementById('make_goldenrod').addEventListener('click', (()=>{
+            document.body.style.backgroundColor = 'goldenrod'
+        }))
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on event handle</title>
+</head>
+
+<body>
+    <h1>Welcome to Event Handling</h1>
+    <h2 id="random_Change">Default text</h2>
+    <button onclick="handleChange()">Click Me | Handle by onclick</button>
+    <button id="AddEvLis"> click me | handle bt addEventListener</button>
+
+    <br>
+    <br>
+    <br>
+    <p id="defaultPara">Default input Text</p>
+    <input type="text" name="" id="inputField">
+    <button id="updateBtn">Update text</button>
+
+    <script>
+        let random_Change = document.getElementById('random_Change');
+        let handleChange = () => {
+            random_Change.innerText = 'handled event by onclick';
+            console.log('button clicked')
+        }
+
+        document.getElementById('AddEvLis').addEventListener('click', (() => {
+            random_Change.innerText = 'handled event by AddEventListener';
+        }))
+
+        let defaultPara = document.getElementById('defaultPara');
+        let inputField = document.getElementById('inputField');
+        let updateBtn = document.getElementById('updateBtn');
+
+        updateBtn.addEventListener('click', (() => {
+
+            if (inputField.value) {
+                defaultPara.innerText = inputField.value;
+                inputField.value = '';
+            }
+            else {
+                defaultPara.innerText = 'Empty input Field. write something!';
+            }
+
+        }))
+    </script>
+</body>
+
+</html>
