@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="h-screen flex items-center justify-center">
+
+    <div id="grandPa" class="w-80 h-80 border border-black flex items-center justify-center">
+        <div id="papa" class="w-64 h-64 border border-black flex items-center justify-center">
+            <div id="me" class="w-52 h-52 border border-black flex items-center justify-center"></div>
+        </div>
+    </div>
+
+    <script>
+        let grandPa = document.getElementById('grandPa');
+        let papa = document.getElementById('papa');
+        let me = document.getElementById('me');
+
+        grandPa.addEventListener('click', (() => {
+            console.log('GrandPa');
+
+            //to stop the propagation
+            event.stopPropagation()
+        }), true)
+
+        //boolean true for make it reverse
+
+        papa.addEventListener('click', (() => {
+            console.log('papa');
+        }), true)
+
+        me.addEventListener('click', (() => {
+            console.log('me');
+        }), true)
+
+    </script>
+</body>
+
+</html>

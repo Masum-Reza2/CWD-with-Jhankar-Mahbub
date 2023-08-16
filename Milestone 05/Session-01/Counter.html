@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="border h-screen flex flex-col justify-center space-y-5">
+        <h1 class="text-center text-5xl text-orange-400 font-bold">Welcome to my Awesome counter</h1>
+
+        <div id="showCount" class="text-center text-6xl font-bold text-red-500">0</div>
+
+        <div class="w-fit mx-auto space-x-5 mt-5">
+            <button
+                onclick="increFunc()"
+                id="Increment"
+                class="hover:scale-110 active:scale-125 transition-all duration-100 text-white bg-green-600 p-2 text-lg rounded-lg font-bold">Increment+</button>
+            <button
+                onclick="decreFunc()"
+                id="Decrement"
+                class="hover:scale-110 active:scale-125 transition-all duration-100 text-white bg-red-500 p-2 text-lg rounded-lg font-bold">Decrement-</button>
+        </div>
+    </div>
+
+    <script>
+        let showCount = document.getElementById('showCount');
+        let Increment = document.getElementById('Increment');
+        let Decrement = document.getElementById('Decrement');
+        
+        let count = 0;
+        let increFunc = () =>{
+            count ++ ;
+            showCount.innerText = count;
+            showCount.style.color = 'green'
+        }
+        
+        let decreFunc = () =>{
+            count -- ;
+            showCount.innerText = count;
+            showCount.style.color = 'red'
+        }
+
+    </script>
+</body>
+
+</html>
