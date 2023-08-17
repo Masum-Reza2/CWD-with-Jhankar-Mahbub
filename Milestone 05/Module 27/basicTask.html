@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <div class="w-fit mx-auto text-center space-y-5">
+        <h1 class="text-3xl">price $<span id="priceAmount">1000</span></h1>
+        <button id="applyBtn" class="bg-indigo-500 px-4 py-2 rounded-md text-white">Apply 30% Disc</button>
+        <h1 class="text-2xl">PLease pay $<span id="showDisc">00</span></h1>
+    </div>
+
+    <hr class="mt-10">
+
+    
+
+    <script>
+
+        //innerText to number converter function
+        let innerTextToNumber = (inputId) => {
+            let x = document.getElementById(inputId);
+            let y = x.innerText;
+            y = Number.parseFloat(y);
+            return y;
+        }
+
+        //function to set innerText
+        let setInnerText = (element, toBeSetElement) => {
+            let x = document.getElementById(element);
+            return x.innerText = toBeSetElement;
+        }
+
+        document.getElementById('applyBtn').addEventListener('click', (() => {
+            let price = innerTextToNumber('priceAmount');
+            let disc = price - (price / 100) * 30;
+            setInnerText('showDisc', disc);
+        }))
+    </script>
+</body>
+
+</html>

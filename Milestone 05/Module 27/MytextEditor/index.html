@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My text Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/0f3e3c819f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="warning" class="bg-red-400 text-2xl py-2 text-white font-bold w-fit px-4 mx-auto absolute top-12 right-32 hidden">
+        Write something first !
+    </div>
+    <div class="h-[80vh] bg-blue-400 mt-10 w-4/5 mx-auto rounded-md shadow-md shadow-black">
+        <h1 class="text-center text-2xl font-bold pt-5">My Text Editor</h1>
+        <div class="mt-2 h-[65vh] bg-sky-200  mx-auto border-2 border-black flex flex-col items-center">
+
+            <div class="w-4/5 mx-auto flex justify-between text-center mt-3">
+                <div class="space-x-1">
+                    <span class="font-bold bg-red-200 px-1 cursor-pointer rounded-sm hover:bg-blue-500"
+                        id="makeBold">B</span>
+                    <span class="font-bold bg-red-200 px-1 cursor-pointer rounded-sm hover:bg-blue-500" id="italicMaker">I</span>
+                    <span class="font-bold bg-red-200 px-1 cursor-pointer rounded-sm hover:bg-blue-500" id="underlinMaker">U</span>
+                </div>
+                <div class="space-x-4">
+                    <span class="bg-red-200 rounded-sm px-1 font-bold cursor-pointer" id="alignLeft">Left</span>
+                    <span class="bg-red-200 rounded-sm px-1 font-bold cursor-pointer" id="alignCenter">Center</span>
+                    <span class="bg-red-200 rounded-sm px-1 font-bold cursor-pointer" id="alignRight">Right</span>
+                    <span class="bg-red-200 rounded-sm px-1 font-bold cursor-pointer" id="alignJustify">Justify</span>
+                    <span class="bg-red-200 rounded-sm px-1 font-bold cursor-pointer" id="clearText">Clear</span>
+                </div>
+                <div class="">
+                    <input  class="text-center inline-block w-10 rounded-md" type="number" name="" id="sizeFont">
+                    <span class="cursor-pointer bg-red-300 px-2 rounded-2xl" id="fontEnter">E</span>
+                    <span class="font-bold border border-black px-1 rounded-sm cursor-pointer mx-2" id="toggleCase">Aa</span>
+                    <span class="">colorPick</span>
+                </div>
+            </div>
+
+            <textarea class="mt-2 h-[55vh] w-[98%] border border-black focus:outline-none" name="" id="inputField"
+                cols="30" rows="10"></textarea>
+
+        </div>
+
+        <div class="flex justify-between font-bold">
+            <p class="pl-4">Total Charecters : <span id="CharCount">00</span></p>
+            <p class="pr-16">Total Words : <span>00</span></p>
+        </div>
+        
+    </div>
+
+    <script src="../MytextEditor/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="mt-10 w-fit mx-auto text-center space-y-5">
+
+        <h1 class="text-3xl">Price $<span id="priceAmount">1000</span></h1>
+        <p class="text-xl text-blue-500">Cupon: <input
+                class="border border-indigo-400 rounded-md text-black text-center p-1" type="text" name="" id="inputField"
+                placeholder="type DISC30"></p>
+        <button class="bg-indigo-400 px-6 py-2 text-white font-bold rounded-md" id="btnApply">Apply</button>
+        <h5 class="text-lg font-bold">PLease pay $<span id="showDisc">00</span></h5>
+    </div>
+
+
+    <script>
+
+        //function for input field to string
+        let inputString = (id) =>{
+            let x = document.getElementById(id);
+            let y = x.value;
+            x.value = '';
+            return y;
+        }
+        //function for input field to number
+        let inputNumber = (id) =>{
+            let x = document.getElementById(id);
+            let y = x.innerText;
+            y = Number.parseFloat(y);
+            return y;
+        }
+
+        //function to set innerText
+        let innerTextSetter = (id,itemToBeSet) =>{
+            let x = document.getElementById(id);
+            return x.innerText = itemToBeSet;
+        }
+        
+        document.getElementById('btnApply').addEventListener('click', (()=>{
+            let inputValue = inputString('inputField');
+            if(inputValue === 'DISC30'){
+                console.log('yes ')
+                let price = inputNumber('priceAmount');
+                let disc = price - (price/100*30);
+                console.log(price)
+                innerTextSetter('showDisc', disc)
+            }
+            else{
+                alert('Chichora kahi our try mar')
+            }
+        }))
+        
+    </script>
+</body>
+
+</html>
