@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+
+<body>
+
+    <script>
+        console.log('Hello Arrow Function');
+        //normal function 
+        function greet() {
+            console.log('Hello Normal function')
+        }
+        greet()
+
+        //Arrow Function
+        let myFunc = (a, b, c) => {
+            let result = a + b + c;
+            console.log(a, b, c, result)
+            return result;
+        }
+        myFunc(2, 3, 4)
+
+        //another way
+        let myFunc2 = (a,b) => a+b
+        let x = myFunc2(2,3)
+        console.log(x)
+
+        //once more way
+        let myFunc3 = a => a;
+        let y = myFunc3(15);
+        console.log(y)
+    </script>
+</body>
+
+</html>

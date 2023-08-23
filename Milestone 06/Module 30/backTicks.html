@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backticks</title>
+</head>
+
+<body>
+
+    <script>
+        let a = 'Hi'
+        let b = 'my name is'
+        let firstName = 'Masum'
+        let lastName = 'Reza'
+        let sentence = a+' ' + b+' ' + firstName+' ' + lastName;
+        //classic way
+        console.log(sentence)
+
+        //ES6 way
+        let hobbies = {
+            hobbby1 : 'Play Free Fire',
+            hobby2 : 'reading Geography',
+            hobby3 : 'watching adventure drama and fantasy movies'
+        }
+        let legendWay = `${a} ${b} ${firstName} ${lastName} \nHe likes to ${hobbies.hobbby1} and ${hobbies.hobby2} he also likes ${hobbies.hobby3}`;
+        console.log(legendWay)
+    </script>
+</body>
+
+</html>
