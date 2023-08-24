@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring and spread operator</title>
+</head>
+
+<body>
+    <script>
+        //Recap
+        console.log('hello recap Destructuring and Spread operator')
+
+        let myObj = {
+            x: 'mrX',
+            y: 'mrY',
+            name: 'Masum Reza',
+            age: 22,
+            proffesion: 'Developer',
+        }
+
+        //doesn't metter if sequence is not maintained (object only)
+        let { name:mywish, age, ...remains } = myObj
+        console.log(mywish)
+        console.log(age)
+        console.log(remains)
+
+        let myArray = [2, 4, 5, 6, 7, 8, 56, 3, 4,];
+        let [first, second, third, ...rest] = myArray
+        console.log(first)
+        console.log(second)
+        //rest returns the remaining elements of the array in a new array.
+        console.log(rest)
+    </script>
+</body>
+
+</html>

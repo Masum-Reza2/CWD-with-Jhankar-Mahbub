@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map method in js</title>
+</head>
+
+<body>
+    <script>
+        console.log('Hello map()');
+        //the method map apply a loop in the entire array and make some operation into the array using a function.
+        // >>> it creates a new array, never modifies the previous array
+
+        //step 01
+        let myArray = [2, 5, 8, 9, 4, 5, 6];
+        let myArray2x = myArray.map((element, index, array) => {
+            console.log(element, index, array)
+        })
+
+        //step 02
+        let numbers = [2, 3, 4, 6, 8]
+        let numbersPlus = numbers.map((element, index, array)=>{
+            return element*2
+        })
+        console.log(numbers)
+        console.log(numbersPlus)
+
+
+        //short cut way of map (method)
+        let realFriends = ['imagination', 'dream', 'hard-work', 'success'];
+        let firstChar = realFriends.map(element => element[0]);
+        console.log(firstChar);
+
+        //get the length of all friends 
+        let lengthsOfFriends = realFriends.map(x => `length of ${x} is ${x.length}`);
+        console.log(lengthsOfFriends)
+
+    </script>
+</body>
+
+</html>

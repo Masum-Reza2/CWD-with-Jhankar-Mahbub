@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional Chaining ?</title>
+</head>
+<body>
+    <script>
+        console.log('Hello optional chaining ?')
+
+        let products = {
+            count : 5000,
+            name : ['samsung', 'appple', 'Lenovo', 'Redmi', 'Realme'],
+            quality : {
+                one : 'Highfy',
+                two : 'Medium',
+                Three : 'moderate'
+            }
+        }
+
+        //question mark stands for optional if available no problem else no-error
+        console.log(products.name[0]);
+        console.log(products.quality?.two);
+        console.log(products.quantiy?.two);
+        
+    </script>
+</body>
+</html>
