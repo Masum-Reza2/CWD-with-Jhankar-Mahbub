@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log('hello extands')
+         
+        class Animal {
+            constructor(name, age, walk){
+                this.name = name;
+                this.age = age;
+                this.walk = walk;
+            }
+
+            preview(){
+                console.log(`hello world! introducing mr ${this.name} he is ${this.age} years old and he can ${this.walk}`)
+            }
+        }
+
+        let cat = new Animal('Waggor', 3, 'walk');
+        cat.preview()
+
+        class Monkey extends Animal {
+            constructor(name, age, walk, climb){
+                super(name,age,walk);
+                this.climb = climb;
+            }
+
+            preview(){
+                super.preview()
+                console.log(`he also can ${this.climb}`)
+            }
+        }
+
+        let manku = new Monkey(
+            'Wokong',
+            12,
+            'walk',
+            'climb'
+        )
+        manku.preview()
+    </script>
+</body>
+</html>

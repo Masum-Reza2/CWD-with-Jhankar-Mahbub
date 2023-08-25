@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reduce an array method in js</title>
+</head>
+
+<body>
+    <script>
+        //Sum of Series / factorial and so on can be easily counted by reduce
+        console.log('hello reduce an method of array')
+        let myarray = [3, 4, 5, 7, 9, 23, 56, 87, 6]
+        let Ssum = myarray.reduce((a, b) => a + b)
+        console.log(Ssum)
+
+        let products = [
+            {id : 1, name : 'Macbook', price : 150000},
+            {id : 2, name : 'hp', price : 31500},
+            {id : 3, name : 'lenovo', price : 36500},
+            {id : 4, name : 'dell', price : 46500}
+        ]
+        console.log(products)
+
+        let names = products.map(elem => elem.name)
+        let prices = products.map(elem => elem.price)
+        console.log(names)
+        console.log(prices)
+
+        let totalPrice = prices.reduce((a,b) => a+b)
+        console.log(totalPrice)
+
+        let costy = products.filter(element => element.price > 50000)
+        console.log(costy)
+
+        let affordAble = products.filter(element => element.price < 40000)
+        console.log(affordAble)
+
+
+        // the method find returns the conditional firstOne 
+        
+    </script>
+</body>
+
+</html>

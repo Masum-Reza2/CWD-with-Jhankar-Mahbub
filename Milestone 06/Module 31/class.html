@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class in js OOP</title>
+</head>
+<body>
+    <script>
+        console.log('Hello class')
+
+        class SchoolForm {
+            constructor(name, age, section, roll){
+                this.name = name;
+                this.age = age;
+                this.section = section;
+                this.roll = roll;
+            }
+
+            preview(){
+                console.log(`hello ${this.name}.Welcome to Kalenga high school. It looks you are ${this.age} years old. And you choose to read in the section ${this.section}, it's awesome that you are a good student your roll is ${this.roll}`)
+            }
+        }
+
+        let masum = new SchoolForm(
+            // params here
+            'Masum Reza',
+            22,
+            'A',
+            1
+        )
+
+        masum.preview()
+        
+    </script>
+</body>
+</html>
