@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callBack</title>
+</head>
+<body>
+    <script>
+
+        //callback function
+        
+        console.log('Hello callback');
+        
+        function greeting (greetHandler, name){
+            greetHandler(name)
+        }
+
+        function greetMorning (name){
+            console.log('good Morning', name)
+        }
+
+        function greetEvening (name){
+            console.log('Good Morning', name)
+        }
+
+        greeting(greetMorning, 'Masum')
+        greeting(greetEvening, 'Reza')
+        
+    </script>
+</body>
+</html>

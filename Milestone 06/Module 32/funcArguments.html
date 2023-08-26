@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function arguments</title>
+</head>
+
+<body>
+    <script>
+        console.log('Hello arguments');
+
+        function sum(a, b, c) {
+            console.log(arguments)
+            let x = [...arguments]
+            console.log(x)
+            console.log(x[5])
+            let total = a + b + c;
+            return total;
+        }
+
+        let result = sum(4, 8, 5, 23, 56, 54, 67, 89, 34, 23);
+        //parameters of sum
+        console.log(sum.length)
+
+        console.log(result)
+    </script>
+</body>
+
+</html>

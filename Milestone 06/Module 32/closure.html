@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure in js</title>
+</head>
+
+<body>
+    <script>
+        console.log('Hello closure');
+
+        function createcounter() {
+            let count = 0;
+
+            function increement() {
+                count++;
+                console.log(count)
+            }
+
+            function decreement() {
+                count--;
+                console.log(count)
+            }
+            return {
+                increement: increement,
+                decreement: decreement
+            }
+        }
+
+        let counter = createcounter();
+        counter.increement()
+        counter.increement()
+        counter.increement()
+        counter.increement()
+        counter.decreement()
+    </script>
+</body>
+
+</html>

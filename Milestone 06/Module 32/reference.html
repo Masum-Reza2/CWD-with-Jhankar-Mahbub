@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reference</title>
+</head>
+
+<body>
+
+    <script>
+        // primitive 
+        // a function can not remodify the original value of a primitive
+        console.log('hello reference')
+
+        let num1 = 2;
+        let num2 = 5;
+
+        let sum = (a, b) => {
+            a = 10;
+            b = 15;
+            let total = a + b;
+            return total;
+        }
+
+        let result = sum(num1, num2);
+        console.log(result)
+        console.log(num1)
+        console.log(num2)
+
+        //non-primitive pass by reference
+        let x = { name: 'Reza', age: 22, salary: 22000 }
+        let y = { name: 'Hablu', age: 32, salary: 122000 }
+
+        let myfunc = (obj1, obj2) => {
+            obj1.name = 'Esha Khan';
+            obj2.name = 'Musha Khan';
+        }
+
+        //so a function can modify the original value of non-primitive object or array
+        console.log(x, y)
+        myfunc(x, y);
+        console.log(x, y)
+
+
+    </script>
+</body>
+
+</html>
