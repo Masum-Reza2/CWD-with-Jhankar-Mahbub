@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON js</title>
+</head>
+<body>
+    <script>
+        console.log('hello JSON');
+
+        let myObj = {
+            name : 'Khalil', 
+            age : 35, 
+            hobbies : ['Cricket', 'football', 'Fishing', 'gardening'],
+            weakness : {
+                one : 'desert',
+                two : 'fire',
+                three : 'cake'
+            }
+        }
+
+        console.log(myObj);
+
+        let strObj = JSON.stringify(myObj);
+        console.log(strObj);
+        let objStr = JSON.parse(strObj);
+        console.log(objStr)
+        
+    </script>
+</body>
+</html>

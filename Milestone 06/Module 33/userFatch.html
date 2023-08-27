@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch users</title>
+</head>
+<body>
+
+    <button onclick="fetchUser()">fetch users</button>
+    
+    <script>
+        console.log('Hello Fetch');
+
+        let fetchUser = () => {
+            fetch('https://jsonplaceholder.typicode.com/users/1/posts')
+            .then(res => res.json())
+            .then(data => showUser(data))
+        }
+
+        let showUser = (data) =>{
+            console.log(data);
+            let users = data.map(item => console.log(item.title))
+        }
+
+    </script>
+</body>
+</html>
