@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch dynamic show in dom</title>
+</head>
+<body>
+    <button onclick="showUser()">Show users</button>
+    <div class="userContainer">
+        <ol id="userList">
+
+        </ol>
+    </div>
+
+    <script>
+        //dynamically showing users in the dom from an API
+        let userList = document.getElementById('userList');
+        let showUser = () =>{
+            fetch('https://jsonplaceholder.typicode.com/users/1/posts')
+            .then(res => res.json())
+            .then(res => {
+                // for(let item of res){
+                //     console.log(item.title);
+                //     let li = document.createElement('li');
+                //     li.innerText = item.title;
+                //     userList.appendChild(li)
+                // }
+
+                res.map(item => {
+                    let li = document.createElement('li');
+                    li.innerText = item.title;
+                    userList.appendChild(li)
+                })
+            })
+        }
+
+    </script>
+</body>
+</html>
