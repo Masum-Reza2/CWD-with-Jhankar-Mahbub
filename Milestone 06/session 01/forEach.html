@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach in js</title>
+</head>
+
+<body>
+    <script>
+        console.log('Hello forEach');
+
+        let myArray = ['mango', 'bango', 'chingo']
+        myArray.forEach(element => console.log(element))
+
+        // a basic calc using forEach
+        let myArray2 = [1, 2, 3]
+
+        let sum = 0;
+        myArray2.forEach(item => sum += item)
+        console.log(sum)
+
+        //find
+        let findArray = ['mango', 'bango', 'chingo', 'mango']
+
+        let x = findArray.find(item => item==='bango')
+        //find and filter works upon condition
+        console.log(x)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template literals and string interpulation</title>
+</head>
+<body>
+    <script>
+        console.log('Hello template literals');
+
+        let name = 'Masum Reza';
+        let age = 22;
+        const address = 'Sylhet';
+        const bow = 'Sopna';
+        const sosurBari = 'Vanugac';
+
+        const subjects = ['bangla', 'English', 'Math']
+        let favWriter = {
+            name: 'kazi Nazrul Islam',
+            age : 'late',
+            address : 'Churuliya'
+        }
+
+        let sentence = `
+        Amar nam ${name}.
+        amar boyos ${age}.
+        amar bari ${address}.
+        amar bow ${bow}.
+        amar sosur Bari ${sosurBari}.
+        amar priyo subject ${subjects.filter(item => item.length < 5)}.
+        amar optional subjects ${subjects.map(item => item).join('/')}.
+        amar priyo kobi ${favWriter.name}
+        `
+        console.log(sentence)
+        
+    </script>
+</body>
+</html>
