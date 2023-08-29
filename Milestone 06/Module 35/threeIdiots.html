@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>...ThreeDots</title>
+</head>
+
+<body>
+
+    <script>
+        // console.log('Hello ...')
+
+        // let numMax = Math.max(34, 67, 89, 12, 99)
+        // console.log(numMax);
+
+        // let arrMax = [34, 67, 89, 12, 99];
+        // console.log(Math.max(arrMax))
+        // console.log(arrMax)
+        // console.log(...arrMax)
+
+        // let modArrMax = Math.max(...arrMax);
+        // console.log(modArrMax)
+
+
+        //spread operator  ...
+        let friends = [3, 4, 5, 6, 7, 8, 9];
+        let bondhu = friends;
+        bondhu.push(100)
+        //both got the pushed value
+        console.log(friends)
+        console.log(bondhu)
+
+        let Anofriend = [...friends]
+        Anofriend.push(200)
+        //Now it's pushing seperately
+        console.log(Anofriend)
+
+    </script>
+</body>
+
+</html>

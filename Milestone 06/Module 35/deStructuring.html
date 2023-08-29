@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+
+<body>
+
+    <script>
+        console.log('Hello destructuring');
+
+        let nayok = {
+            name: 'Ononto Jolil',
+            age: 22,
+            phone: '01846536281'
+        }
+
+        //normal way
+        // console.log(nayok);
+        // console.log(nayok.name)
+        // console.log(nayok.age)
+        // console.log(nayok.phone)
+
+        //not bad 
+        // let name = nayok.name;
+        // let age = nayok.age;
+        // let phone = nayok.phone;
+
+        // console.log(name)
+        // console.log(age)
+        // console.log(phone)
+
+        //same task in a smart way. so called destructuring
+        // let {name, age, phone} = nayok
+        // console.log(name)
+        // console.log(age)
+        // console.log(phone)
+
+        //not only the predefined keyNames we can redeclere the keyNames
+        let { name: nam, age: umar, phone: pata } = nayok
+        console.log(nam)
+        console.log(umar)
+        console.log(pata)
+
+
+        //Array destructuring
+        let myArray = [5, 7]
+        let [x, y] = myArray;
+        console.log(x)
+        console.log(y)
+
+
+        //destructure array with a function
+        function doubleThem(a, b) {
+            return [a * 2, b * 2]
+        }
+
+        let [first, second] = doubleThem(3,9)
+        console.log(first, second)
+        
+    </script>
+</body>
+
+</html>
