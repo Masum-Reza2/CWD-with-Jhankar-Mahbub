@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throwing custom error</title>
+</head>
+<body>
+    <script>
+        console.log('Hello custom Error')
+
+        try {
+            let age = prompt('Enter your age')
+            age = Number.parseFloat(age)
+            if(age>100){
+                throw new ReferenceError('Invalid age')
+            }
+        } catch (error) {
+            // console.log(error.name)
+            // console.log(error.message)
+            console.log(error.stack)
+        }
+        
+    </script>
+</body>
+</html>

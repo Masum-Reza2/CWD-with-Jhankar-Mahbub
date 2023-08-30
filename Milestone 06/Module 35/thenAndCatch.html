@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.then and .catch in js</title>
+</head>
+<body>
+    <script>
+        console.log('Hello .then and .catch')
+
+        // .then will fire(execites) if the promise resolve else .catch will fire
+
+        let myPromise = new Promise((resolve, reject)=>{
+            let age = prompt('Enter your age ')
+            age = Number.parseFloat(age);
+            console.log(age)
+            if(age>18){
+                resolve('Welcome to our club')
+            }
+            else{
+                reject('Sorry kiddies are not allowed')
+            }
+        }).then(res => console.log(res), (res) => console.log(res))
+
+        
+        //now promise is created how can we sense that it resolves or rejects
+        //ans is .than and .catch they both are arrow function
+
+        // .then((res)=>{
+        //     console.log(res)
+        // })
+        // .catch((res)=>{
+        //     console.log(res)
+        // })
+
+        // we can make it more shorter
+        // .then(res => console.log(res))
+        // .catch(res => console.log(res))
+
+        //we can also make it pluging with its parent like above
+        
+    </script>
+</body>
+</html>

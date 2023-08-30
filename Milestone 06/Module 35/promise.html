@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise in js</title>
+</head>
+<body>
+    <script>
+        console.log('Hello Promise')
+
+        let myPromise = new Promise((resolve, reject)=>{
+            let a = Math.floor(Math.random()*10);
+            console.log(a)
+            if(a>5){
+                resolve('Nice resolve condition fulfilled')
+            }
+            else{
+                reject('promise rejected')
+            }
+        }).then(result => console.log(result), (result) => console.log(result))
+
+        // myPromise.then(res => console.log(res))
+        // myPromise.catch(error => console.log(error))
+        
+    </script>
+</body>
+</html>
