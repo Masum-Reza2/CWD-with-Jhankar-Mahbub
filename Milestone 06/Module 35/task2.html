@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" data-theme='light'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <div class="h-screen flex flex-col items-center justify-center text-2xl font-bold space-y-5">
+        <div class="flex gap-x-5">
+            <div id="countText" class="text-4xl text-red-500 px-7 shadow-lg shadow-gray-400 rounded-md">0</div>
+            <div id="entertainment" class="text-4xl text-red-500 px-7 shadow-lg shadow-gray-400 rounded-md">0</div>
+        </div>
+
+        <div class="space-x-8">
+            <button id="btnStart" class="btn text-white px-10 btn-success" onclick="startHandler(countText,1000),startHandler(entertainment,10)">Start</button>
+            <button id="btnStop" class="btn text-white px-10 btn-error" onclick="stopHandler()">Stop</button>
+            <button id="btnReset" class="btn text-white px-10 btn-warning" onclick="resetHandler(countText),resetHandler(entertainment)">Reset</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        let countText = document.getElementById('countText');
+        let entertainment = document.getElementById('entertainment');
+        let count = countText.innerText;
+        count = Number.parseFloat(count);
+
+        let timer;
+        let startHandler = (id,duration) => {
+            timer = setInterval(() => {
+                id.innerText = count++;
+            }, duration);
+        }
+
+        let stopHandler = () => {
+            clearInterval(timer);
+        }
+
+        let resetHandler = (id) => {
+            id.innerText = 0;
+            count = 0;
+        }
+
+    </script>
+</body>
+
+</html>

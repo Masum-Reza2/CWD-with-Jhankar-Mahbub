@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" data-theme = 'light'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <div class="border h-screen flex items-center justify-center">
+        <div class="font-bold text-xl md:text-2xl px-4 py-2 shadow-lg shadow-red-100 rounded-2xl transition-all duration-1000 cursor-pointer hover:scale-150 hover:shadow-red-200" id="clock">
+
+        </div>
+    </div>
+
+
+    <script>
+        let clock = document.getElementById('clock');
+        let watch = () => {
+            clock.innerText = new Date().toLocaleTimeString();
+        }
+
+        let timer = setInterval(watch, 1000)
+
+    </script>
+</body>
+
+</html>
