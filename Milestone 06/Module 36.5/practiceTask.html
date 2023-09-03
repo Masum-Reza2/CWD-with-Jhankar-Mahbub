@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoppingCart</title>
+</head>
+
+<body>
+
+    <input id="productField" type="text" placeholder="Product">
+    <input id="quantityField" type="text" placeholder="Quantity">
+    <button onclick="addProduct()">Add Product</button>
+
+    <ol id="productContainer">
+
+    </ol>
+
+    <script>
+        let addProduct = () => {
+            let productField = document.getElementById('productField')
+            let quantityField = document.getElementById('quantityField')
+            let product = productField.value;
+            let quantity = quantityField.value;
+
+            setItemUi(product, quantity)
+            productField.value = '';
+            quantityField.value = '';
+        }
+
+        let setItemUi = (product, quantity) => {
+            let productContainer = document.getElementById('productContainer');
+
+            let li = document.createElement('li');
+            li.innerText = `${product} : ${quantity}`
+            productContainer.appendChild(li);
+
+            saveToLocSt(product, quantity)
+        }
+
+        let obj = {};
+        // console.log(obj)
+        let saveToLocSt = (product, quantity) =>{
+            obj[product] = quantity;
+            // console.log(obj)
+
+            let objStr = JSON.stringify(obj);
+            
+            localStorage.setItem('cart', objStr)
+            // console.log(objStr)
+        }
+
+        let showInUi = () => {
+            let cart = localStorage.getItem('cart');
+            let cartObj = JSON.parse(cart)
+            for(let item in cartObj){
+                let product = item;
+                let quantity = cartObj[product]
+                setItemUi(product, quantity)
+            }
+        }
+        showInUi()
+    </script>
+</body>
+
+</html>

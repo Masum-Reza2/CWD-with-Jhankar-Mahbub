@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setting object in localStorage</title>
+</head>
+
+<body>
+
+    <button onclick="setItem()">Set Details</button>
+
+    <script>
+        localStorage.clear()
+        console.log('hello localStorage')
+
+        let myObj = {
+            name: 'Masum',
+            age: 22,
+            profession: 'developer'
+        }
+
+        // to set a object in localStorage we must convert it into string.
+
+        let setItem = () => {
+            localStorage.setItem('details', JSON.stringify(myObj))
+        }
+
+    </script>
+</body>
+
+</html>

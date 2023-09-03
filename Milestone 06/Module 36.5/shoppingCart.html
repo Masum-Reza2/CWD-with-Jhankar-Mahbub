@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoppingCart</title>
+</head>
+
+<body>
+
+    <input id="productField" type="text" placeholder="Product">
+    <input id="quantityField" type="text" placeholder="Quantity">
+    <button onclick="addProduct()">Add Product</button>
+
+    <ul id="productContainer">
+
+    </ul>
+
+    <script>
+        // console.log('Hello Shopping Cart')
+        let addProduct = () => {
+            let productField = document.getElementById('productField');
+            let quantityField = document.getElementById('quantityField');
+
+            let product = productField.value;
+            let quantity = quantityField.value;
+
+            // console.log(product, quantity)
+
+            productField.value = ''
+            quantityField.value = ''
+
+            addParent(product, quantity)
+
+            saveToLocSt(product, quantity)
+
+        }
+
+        let addParent = (product, quantity) => {
+            let productContainer = document.getElementById('productContainer');
+
+            let li = document.createElement('li');
+            li.innerText = `${product} : ${quantity}`
+
+            productContainer.appendChild(li);
+        }
+
+        let getStoredShoppingcart = () => {
+            let cart = {};
+            let storedCart = localStorage.getItem('cart')
+            if (storedCart) {
+                cart = JSON.parse(storedCart)
+            }
+            return cart;
+        }
+
+        let saveToLocSt = (product, quantity) => {
+            let cart = getStoredShoppingcart();
+            cart[product] = quantity;
+            console.log(cart)
+
+            let cartStr = JSON.stringify(cart);
+            console.log(cartStr)
+            localStorage.setItem('cart', cartStr)
+        }
+
+        let showCart = () => {
+            let cart = getStoredShoppingcart();
+            for(let item in cart){
+                let quantity = cart[item]
+                console.log(item, quantity)
+                addParent(item, quantity);
+            }
+        }
+        showCart()
+    </script>
+</body>
+
+</html>
