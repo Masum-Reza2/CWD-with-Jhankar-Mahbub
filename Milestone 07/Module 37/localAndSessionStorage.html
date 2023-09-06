@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local and Session storage</title>
+</head>
+<body>
+    
+    <script>
+        console.log('Hello storage');
+
+        // setting datas to localStorage
+        localStorage.setItem('mobile', '2000');
+        localStorage.setItem('laptop', JSON.stringify(['apple', 'samsung', 'nokia', 'redmi']));
+        localStorage.setItem('Details', JSON.stringify({name:'Masum Reza', address: 'sylhet', dist:'Moulvibazar'}))
+
+        // getting data from localStorage
+        console.log(localStorage.getItem('mobile'))
+        console.log(JSON.parse(localStorage.getItem('laptop')))
+        console.log(JSON.parse(localStorage.getItem('Details')))
+
+    </script>
+</body>
+</html>

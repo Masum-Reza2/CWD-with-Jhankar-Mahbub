@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some shortcuts </title>
+</head>
+<body>
+    
+    <script>
+        console.log('hello shortcut');
+
+        // number to string 
+        let num = 56;
+        console.log(num)
+        let numStr = num+'';
+        console.log(numStr)
+
+        // string to number
+        let str = '500';
+        console.log(str)
+        let strNum = +str;
+        console.log(strNum)
+
+        // ternary operator
+        let isActive = true;
+        let showActive = () => console.log('User active')
+        let showInActive = () => console.log('User inactive')
+
+        let mode = isActive? showActive() : showInActive();
+
+        // more shortcut
+        isActive && showActive()
+        isActive || showInActive()
+        
+    </script>
+</body>
+</html>
