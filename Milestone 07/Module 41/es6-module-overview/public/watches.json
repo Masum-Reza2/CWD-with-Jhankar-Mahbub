@@ -1,0 +1,73 @@
+[
+    {
+      "brand": "Rolex mr john",
+      "model": "Submariner",
+      "price": 10000,
+      "waterproof": true,
+      "dialColor": "Black"
+    },
+    {
+      "brand": "Omega",
+      "model": "Seamaster",
+      "price": 8000,
+      "waterproof": true,
+      "dialColor": "Blue"
+    },
+    {
+      "brand": "Tag Heuer",
+      "model": "Carrera",
+      "price": 6000,
+      "waterproof": false,
+      "dialColor": "Silver"
+    },
+    {
+      "brand": "Patek Philippe",
+      "model": "Nautilus",
+      "price": 30000,
+      "waterproof": false,
+      "dialColor": "Brown"
+    },
+    {
+      "brand": "Audemars Piguet",
+      "model": "Royal Oak",
+      "price": 25000,
+      "waterproof": false,
+      "dialColor": "Black"
+    },
+    {
+      "brand": "Hublot",
+      "model": "Big Bang",
+      "price": 20000,
+      "waterproof": true,
+      "dialColor": "Red"
+    },
+    {
+      "brand": "Panerai",
+      "model": "Luminor",
+      "price": 9000,
+      "waterproof": true,
+      "dialColor": "Green"
+    },
+    {
+      "brand": "Breitling",
+      "model": "Navitimer",
+      "price": 7500,
+      "waterproof": false,
+      "dialColor": "Black"
+    },
+    {
+      "brand": "IWC",
+      "model": "Portuguese",
+      "price": 11000,
+      "waterproof": false,
+      "dialColor": "Blue"
+    },
+    {
+      "brand": "Cartier",
+      "model": "Tank",
+      "price": 12000,
+      "waterproof": false,
+      "dialColor": "White"
+    }
+  ]
+  
