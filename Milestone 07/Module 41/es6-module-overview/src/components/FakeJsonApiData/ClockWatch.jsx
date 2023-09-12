@@ -9,13 +9,21 @@ import WatchCard from './WatchCard';
 const ClockWatch = () => {
 
     // local json
+    // const [clocks, setClocks] = useState([])
+    // useEffect(() => {
+    //     fetch('watches.json')
+    //         .then(res => res.json())
+    //         .then(data => setClocks(data))
+    // }, [])
+
+    // github host
     const [clocks, setClocks] = useState([])
     useEffect(() => {
-        fetch('watches.json')
+        fetch('https://raw.githubusercontent.com/Masum-Reza2/CWD-with-Jhankar-Mahbub/main/Milestone%2007/Module%2041/es6-module-overview/public/watches.json')
             .then(res => res.json())
             .then(data => setClocks(data))
     }, [])
-    
+
 
     return (
         <div>
