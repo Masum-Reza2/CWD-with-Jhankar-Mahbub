@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Fitness Paradise",
+    "features": ["Cardio Equipment", "Weightlifting Area"],
+    "price": 49.99
+  },
+  {
+    "id": 2,
+    "name": "AquaFit Gym",
+    "features": ["Swimming Pool", "Sauna", "Personal Trainer", "Spa Services", "Cafeteria"],
+    "price": 79.99
+  },
+  {
+    "id": 3,
+    "name": "Yoga Bliss Center",
+    "features": ["Yoga Studio"],
+    "price": 59.99
+  },
+  {
+    "id": 4,
+    "name": "Strength Haven",
+    "features": ["Basketball Court", "CrossFit Area", "Massage Therapy", "Squash Courts", "Rock Climbing Wall"],
+    "price": 69.99
+  },
+  {
+    "id": 5,
+    "name": "Tennis Plus",
+    "features": ["Tennis Courts", "Pilates Studio", "Childcare Services", "Racquet Rental", "Tennis Coaching"],
+    "price": 64.99
+  }
+]
