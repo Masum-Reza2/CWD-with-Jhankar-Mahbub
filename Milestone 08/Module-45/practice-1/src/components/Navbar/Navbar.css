@@ -1,0 +1,9 @@
+.active{
+    border: 2px solid purple;
+    border-radius: 8px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
