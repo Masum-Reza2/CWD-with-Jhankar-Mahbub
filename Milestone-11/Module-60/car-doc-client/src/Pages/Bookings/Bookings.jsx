@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import useGlobal from "../../Hooks/useGlobal"
 import BookingCard from "./BookingCard";
+import axios from "axios";
 
 const Bookings = () => {
     const { user } = useGlobal();
@@ -10,12 +11,20 @@ const Bookings = () => {
     const url = `http://localhost:5000/bookings?email=${user?.email}&sort=1`
 
     useEffect(() => {
-        fetch(url)
-            .then(res => res.json())
-            .then(data => {
-                setBookings(data)
+        // fetch(url)
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         setBookings(data)
+        //     })
+
+        // using axios
+        axios.get(url, { withCredentials: true })
+            .then(res => {
+                setBookings(res.data)
             })
-    }, [user])
+            .catch(error => console.log(error.message))
+
+    }, [])
 
     const handleDelete = (id) => {
         const proceed = confirm('Are you sure you want to delete this booking')

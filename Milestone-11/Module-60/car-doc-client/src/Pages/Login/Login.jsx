@@ -1,6 +1,7 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../../assets/images/login/login.svg'
 import useGlobal from '../../Hooks/useGlobal';
+import axios from 'axios';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -12,14 +13,25 @@ const Login = () => {
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
+        // console.log(email, password);
 
         // logging in user
         loginUser(email, password)
             .then(result => {
                 console.log(result.user);
                 alert('login successfull');
-                navigate(state || '/');
+                // navigate(state || '/');
+
+                // >>>>>>>>| axios + JWT |<<<<<<<<<<
+                const jwtUser = { email };
+                axios.post('http://localhost:5000/jwt', jwtUser, { withCredentials: true })
+                    .then(res => {
+                        console.log(res.data)
+                        if (res.data.success) {
+                            navigate(state || '/');
+                        }
+                    })
+                    .catch(error => console.log(error.message))
             })
             .catch(error => {
                 console.log(error.message);
