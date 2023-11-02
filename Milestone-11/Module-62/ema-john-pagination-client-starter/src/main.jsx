@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
 import './index.css'
 import {
   createBrowserRouter,
@@ -25,20 +24,20 @@ const router = createBrowserRouter([
         loader: () => fetch('http://localhost:5000/productCount'),
       },
       {
-        path: 'orders',
+        path: '/orders',
         element: <Orders></Orders>,
         loader: cartProductsLoader
       },
       {
-        path: 'inventory',
+        path: '/inventory',
         element: <Inventory></Inventory>
       },
       {
-        path: 'checkout',
+        path: '/checkout',
         element: <Checkout></Checkout>
       },
       {
-        path: 'login',
+        path: '/login',
         element: <Login></Login>
       }
     ]

@@ -34,22 +34,54 @@ async function run() {
     const productCollection = database.collection("products");
 
     // >>>>>>>>CRUD Endpoints<<<<<<<<<<
-    app.get('/products', async (req, res) => {
+
+    // specific productby id
+    app.post('/productByid', async (req, res) => {
       try {
-        const cursor = productCollection.find();
+        const ids = req.body;
+        const productIds = ids.map(id => new ObjectId(id))
+        // console.log(productIds)
+
+        // sending data matches only the id
+        const query = { _id: { $in: productIds } };
+
+        const cursor = productCollection.find(query);
         const result = await cursor.toArray();
         res.send(result)
       } catch (error) {
+        res.send(error)
         console.log(error)
       }
     })
+
 
     //>>>>>>>>>>>>>>>>>>> pagination new things<<<<<<<<<<<<<<<<<<<<<<<
     // always use try catch to prevent server crash
     app.get('/productCount', async (req, res) => {
       try {
         const count = await productCollection.estimatedDocumentCount();
-        res.send({ count })
+        res.send({ count }) // sending total product number in client side.
+      } catch (error) {
+        console.log(error)
+      }
+    })
+
+    app.get('/products', async (req, res) => {
+      try {
+        // console.log(req.query);
+        const page = Number.parseFloat(req?.query?.page) || 0;
+        const size = Number.parseFloat(req?.query?.size) || 10;
+        // console.log(page, size)
+
+        const skip = (page - 1) * size;
+        // console.log(skip)
+
+        const cursor = productCollection.find();
+        const result = await cursor.skip(skip).limit(size).toArray();
+
+        // const result = await productCollection.find({}).skip(skip).limit(size).toArray();
+
+        res.send(result)
       } catch (error) {
         console.log(error)
       }
