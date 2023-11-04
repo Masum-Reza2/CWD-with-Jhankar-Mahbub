@@ -9,6 +9,11 @@ const Shop = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
 
+    // refactoring
+    const storedCart = getShoppingCart();
+    const ids = Object.keys(storedCart);
+    console.log(ids)
+
     //  my codes applying pagination
     const [itemsPerPage, setItemsPerpage] = useState(10);
     const [currentPage, setCurrentPage] = useState(1);
@@ -58,7 +63,7 @@ const Shop = () => {
     }, [itemsPerPage, currentPage]);
 
     useEffect(() => {
-        const storedCart = getShoppingCart();
+
         const savedCart = [];
         // step 1: get id of the addedProduct
         for (const id in storedCart) {
