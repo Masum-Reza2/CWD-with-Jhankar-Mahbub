@@ -1,6 +1,7 @@
 import SectionTitle from "../SectionTitle/SectionTitle";
 import useMenus from "../../Hooks/useMenus";
 import CategoryMenus from "../../Shared/CategoryMenus/CategoryMenus";
+import { Link } from "react-router-dom";
 
 const PopulerItems = () => {
     const { menus } = useMenus();
@@ -23,7 +24,9 @@ const PopulerItems = () => {
             <CategoryMenus data={populer} />
 
             <div className="text-center pt-5">
-                <button className="btn btn-outline border-0 border-b-4">Order Now</button>
+                <Link to={'/order'}>
+                    <button className="btn btn-outline border-0 border-b-4">Order Now</button>
+                </Link>
             </div>
         </section>
     )
