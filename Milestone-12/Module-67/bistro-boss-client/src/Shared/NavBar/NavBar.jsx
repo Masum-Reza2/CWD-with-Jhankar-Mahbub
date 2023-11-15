@@ -1,8 +1,12 @@
 import { NavLink, useNavigate } from "react-router-dom"
 import useGlobal from "../../Hooks/useGlobal"
 import Swal from "sweetalert2";
+import { AiOutlineShoppingCart } from 'react-icons/ai';
+import useCarts from "../../Hooks/useCarts";
+
 
 const NavBar = () => {
+    const { carts } = useCarts()
 
     const { user, logOutUser } = useGlobal();
     const navigate = useNavigate();
@@ -25,6 +29,12 @@ const NavBar = () => {
         <li><NavLink to={'/menus'}>Our Menu</NavLink></li>
         <li><NavLink to={'/order/salad'}>Order Food</NavLink></li>
         <li><NavLink to={'/register'}>Register</NavLink></li>
+        <li><NavLink to={'/dashboard/cart'}>
+            <button className="btn mr-2">
+                <AiOutlineShoppingCart />
+                <div className="badge badge-secondary">+{carts?.length}</div>
+            </button>
+        </NavLink></li>
 
         {
             user ?
