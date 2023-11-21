@@ -54,9 +54,9 @@ const DashBoard = () => {
                                     <IoMdHome />
                                     <span>My cart ({carts.length})</span></NavLink>
                                 </li>
-                                <li><NavLink className="flex items-center pl-5 p-2 gap-2 bg-blue-400" to={'/dashboard/bookings'}>
+                                <li><NavLink className="flex items-center pl-5 p-2 gap-2 bg-blue-400" to={'/dashboard/paymentHistory'}>
                                     <IoMdList />
-                                    <span>My Bookings</span></NavLink>
+                                    <span>Payment History</span></NavLink>
                                 </li>
                             </>
                     }

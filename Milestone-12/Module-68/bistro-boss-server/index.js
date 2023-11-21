@@ -1,8 +1,12 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-require('dotenv').config()
+require('dotenv').config();
 const jwt = require('jsonwebtoken');
+
+//  >>>>>>>>>>>>>new things payment gateWay<<<<<<<<<<<<<<<<<<<
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+
 
 
 const port = process.env.PORT || 5000;
@@ -55,6 +59,7 @@ async function run() {
         const menuCollection = database.collection("menu");
         const reviewCollection = database.collection("reviews");
         const userCollection = database.collection("users");
+        const paymentCollection = database.collection("payments");
 
 
 
@@ -168,6 +173,7 @@ async function run() {
             }
         })
 
+        // menu related api
         app.get('/menu', async (req, res) => {
             try {
                 const result = await menuCollection.find().toArray();
@@ -176,6 +182,60 @@ async function run() {
                 console.log(error)
             }
         })
+
+        //  remember that only admin can add an item
+        app.post('/menu', verifyToken, verifyAdmin, async (req, res) => {
+            try {
+                const item = req?.body;
+                const result = await menuCollection.insertOne(item);
+                res.send(result);
+            } catch (error) {
+                console.log(error)
+            }
+        })
+
+        app.get('/menu/:id', async (req, res) => {
+            try {
+                const id = req?.params?.id;
+                const query = { _id: new ObjectId(id) };
+                const result = await menuCollection.findOne(query);
+                res.send(result);
+            } catch (error) {
+                console.log(error)
+            }
+        })
+
+        // only admin can do this 
+        app.patch('/menu/:id', verifyToken, verifyAdmin, async (req, res) => {
+            try {
+                const id = req?.params?.id;
+                const filter = { _id: new ObjectId(id) }
+                const item = req?.body;
+                const updateDoc = {
+                    $set: {
+                        ...item
+                    },
+                };
+                const result = await menuCollection.updateOne(filter, updateDoc);
+                res.send(result)
+            } catch (error) {
+                console.log(error)
+            }
+        })
+
+        //  only admin can delete this 
+        app.delete('/menus/:id', verifyToken, verifyAdmin, async (req, res) => {
+            try {
+                const id = req?.params?.id;
+                console.log(id)
+                const query = { _id: new ObjectId(id) };
+                const result = await menuCollection.deleteOne(query);
+                res.send(result);
+            } catch (error) {
+                console.log(error)
+            }
+        })
+
         app.get('/review', async (req, res) => {
             try {
                 const result = await reviewCollection.find().toArray();
@@ -215,6 +275,71 @@ async function run() {
                 const id = req?.params?.id;
                 const query = { _id: new ObjectId(id) };
                 const result = await cartCollection.deleteOne(query);
+                res.send(result);
+            } catch (error) {
+                console.log(error)
+            }
+        })
+
+
+        // >>>>>>>>>>>>>>>>PAYMENT INTENT<<<<<<<<<<<<<<<<<<
+        app.post("/create-payment-intent", async (req, res) => {
+            try {
+                const { price } = req?.body;
+                const amount = parseInt(price * 100);
+
+                const paymentIntent = await stripe.paymentIntents.create({
+
+                    amount: amount,
+
+                    // don't forget to add it
+                    payment_method_types: ["card"],
+
+                    currency: "usd",
+                });
+
+                res.send({
+                    clientSecret: paymentIntent.client_secret,
+                });
+
+            } catch (error) {
+                console.log(error)
+            }
+        })
+
+        // payment history collection and delete carts item two in one
+        app.post('/payments', async (req, res) => {
+            try {
+                const payment = req?.body;
+                console.log(payment)
+
+                // saved history to db
+                const paymentResult = await paymentCollection.insertOne(payment);
+
+                // now carefully delete the confirmed cart items
+                const query = {
+                    _id: {
+                        $in: payment?.cartIds?.map(id => new ObjectId(id))
+                    }
+                }
+                const deleteResult = await cartCollection.deleteMany(query);
+
+                res.send({ paymentResult, deleteResult });
+
+            } catch (error) {
+                console.log(error)
+            }
+        })
+
+        // get payment history user specific
+        app.get('/payments/:email', verifyToken, async (req, res) => {
+            try {
+                const email = req?.params?.email;
+                if (email !== req.decoded.email) {
+                    return res.status(403).send({ message: 'forbidden access' });
+                }
+                const filter = { email: email };
+                const result = await paymentCollection.find(filter).toArray();
                 res.send(result);
             } catch (error) {
                 console.log(error)

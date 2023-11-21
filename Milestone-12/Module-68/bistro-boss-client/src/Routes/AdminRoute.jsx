@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Navigate, useLocation } from "react-router-dom";
 import useAdmin from "../Hooks/useAdmin"
 import useGlobal from "../Hooks/useGlobal";
@@ -10,7 +11,7 @@ const AdminRoute = ({ children }) => {
 
     if (loading || isLoading) return <Spinner />
     if (user && isAdmin) return children
-    return <Navigate state={pathname} to={'/login'}></Navigate>
+    return <Navigate state={pathname} to={'/'}></Navigate>
 }
 
 export default AdminRoute

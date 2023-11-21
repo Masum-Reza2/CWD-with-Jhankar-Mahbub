@@ -2,6 +2,7 @@ import { AiFillDelete } from "react-icons/ai";
 import useCarts from "../../Hooks/useCarts"
 import Swal from "sweetalert2";
 import useSecureAxios from "../../Hooks/useSecureAxios";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
     const { carts, refetch } = useCarts();
@@ -46,8 +47,10 @@ const Cart = () => {
         <div>
             <div className="flex  items-center justify-evenly">
                 <h2 className="text-3xl font-medium py-2">My Cart items : {carts?.length}</h2>
-                <h2 className="text-3xl font-medium py-2">Total price : {totalPrice}</h2>
-                <button className="btn btn-error btn-sm text-white">Pay</button>
+                <h2 className="text-3xl font-medium py-2">Total price : ${totalPrice}</h2>
+                <Link to={carts?.length ? '/dashboard/payment' : '#'}>
+                    <button disabled={!carts.length} className="btn btn-error btn-sm text-white">Pay</button>
+                </Link>
             </div>
 
             {/* table */}
