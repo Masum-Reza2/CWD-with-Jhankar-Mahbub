@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import useGlobal from "./useGlobal";
 
 const instance = axios.create({
-    baseURL: 'http://localhost:5000',
+    baseURL: 'https://bistro-boss-server-eight-xi.vercel.app',
     // withCredentials: true,
     headers: { token: localStorage.getItem('token') }
 });
