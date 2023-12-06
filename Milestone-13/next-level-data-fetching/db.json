@@ -1,0 +1,45 @@
+{"posts" :
+    [
+        {
+          "id": 1,
+          "title": "Maram doram",
+          "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "likeCount": 150
+        },
+        {
+          "id": 2,
+          "title": "Faux Data",
+          "desc": "This is some fake data for demonstration purposes.",
+          "likeCount": 20
+        },
+        {
+          "id": 3,
+          "title": "Sample Title",
+          "desc": "A brief description for the sample title.",
+          "likeCount": 8
+        },
+        {
+          "id": 4,
+          "title": "Random Stuff",
+          "desc": "Just some random data to fill in the array.",
+          "likeCount": 12
+        },
+        {
+          "id": 5,
+          "title": "Test Data",
+          "desc": "Testing out the structure of this fake data.",
+          "likeCount": 18
+        },
+        {
+          "id": 6,
+          "title": "Placeholder",
+          "desc": "Placeholder description for the sixth item.",
+          "likeCount": 25
+        } ,
+        {
+          "id": 6,
+          "title": "Placeholder",
+          "desc": "Placeholder description for the sixth item.",
+          "likeCount": 25
+        }      
+]}
